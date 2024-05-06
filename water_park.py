@@ -1,0 +1,1 @@
+def main(): print("This is water park")
