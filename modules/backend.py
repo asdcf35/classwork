@@ -2,18 +2,18 @@ from math import *
 import os
 import sys
 if os.name() == "nt":
-    os.system(" & 'c:\Program Files\Python310\python.exe' -m pip install pandas")
+    os.system(" & 'c:\Program Files\Python310\python.exe' -m pip install pandas colorama")
 
 import pandas as pd
 # rides
 class Ride:
     def __init__(self, age_range, desc, working) -> None:
-        self.min_age, self.max_age = age_range
+        self.age_range = age_range
         self.desc = desc
         self.working = working
 
     def check_age(self, age) -> bool:
-        return self.min_age < age < self.max_age
+        return self.age_range[0] < age < self.age_range[1]
 
     def working(self) -> None:
         self.working = not self.working
