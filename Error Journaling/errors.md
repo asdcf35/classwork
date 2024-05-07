@@ -1,9 +1,11 @@
 ### Entry 1:
 
-**Date:** January 15, 2023
-**Error:** NameError: name 'num' is not defined
-**Description:** Tried to print the value of the variable 'num', but received a NameError. The code snippet was part of a function where 'num' should have been assigned a value before being used.
+**Date:**: 07/05/2024
+**Error:** IndexError: list index out of range
+**Description:** Inputted a number that was higher than the highest list index(a page number for a page that doesn't exist)
 **Steps Taken:**
-* Reviewed the code and confirmed that 'num' was indeed declared.
-* Checked for any typos or misspellings.
-* Realized that I mistakenly deleted the line where 'num' was assigned a value. Resolution: Added the line 'num = 10' before the print statement, and the error was resolved.
+
+- checked to see if I used the wrong number
+- checked to see if my expression inside was working
+- looked over the input(saw the mistake: I entered 12 instead of 1, causing the error)
+**Resolution:** put the code in a try-catch block, prints the 

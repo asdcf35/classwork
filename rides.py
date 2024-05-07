@@ -14,8 +14,6 @@ import msvcrt
 # User Made Imports
 from backend import *
 # -----------------------------------------------------
-# create Ride objects from all the list objectas
-
 
 
 def disp_ride(ride: Ride) -> None:
@@ -36,6 +34,7 @@ def disp_ride(ride: Ride) -> None:
             if key == "q":
                 break
 
+
 def main():
     rides = rides_from_file("rides.csv")
 
@@ -43,9 +42,8 @@ def main():
     list_of_rides = "Here is a list of all the rides:\n"
     # add all the rides (formatted: <<Index Number>>. <<Ride Name>>)
     for index, ride_name in enumerate(rides.keys()):
-        list_of_rides += f"\t{index + 1}. {ride_name}\n"
+        list_of_rides += f"\t{index + 1:>2}. {ride_name}\n"
 
-    
     # ask user(numbers)
     while True:
         try:
@@ -60,7 +58,10 @@ def main():
             )
             # if the user enters q(exit value), exit
             if user_ride == "q":
-                print("Thank you for visiting the Amusement Park! Here's a gift for you!")
+                print(
+                    "Thank you for visiting the Amusement Park! Here's a gift for you!"
+                )
+                sleep(2)
                 # TODO: a pdf or html of them taking a picture with the camera
                 break
             else:
@@ -73,13 +74,14 @@ def main():
             # check if there is any age restrictions(if it is not 0 and inf)
             if rides[user_ride].age_range == (0, inf):
                 disp_ride(rides[user_ride])
-            print(
-                f"The {user_ride} is a great choice! However we need to check your age."
-            )
-            age = input("What is your age? ")
-            
-            # TODO: use age_check function(returns true if in the correct value, else False
-            if rides[user_ride].check_age:
-                disp_ride(rides[user_ride])
             else:
-                print("Sorry we can't let you go in.")
+                print(
+                    f"The {user_ride} is a great choice! However we need to check your age."
+                )
+                age = input("What is your age? ")
+
+                # TODO: use age_check function(returns true if in the correct value, else False
+                if rides[user_ride].check_age(age):
+                    disp_ride(rides[user_ride])
+                else:
+                    print("Sorry we can't let you go in.")

@@ -3,6 +3,23 @@ import concessions
 import water_park
 import time
 import os
+#This is used to log all errors needed to fix(unhandled)
+import logging, sys, traceback, datetime
+
+logger = logging.getLogger('logger')
+fh = logging.FileHandler('test.log')
+logger.addHandler(fh)
+
+
+def exc_handler(exctype, value, tb):
+    """Prints Errors to a file, for later looking"""
+    log_format = f"""
+Error {datetime.datetime.today().strftime("%d/%m/%Y")}:
+{"".join(traceback.format_exception(exctype, value, tb))}
+    """
+    logger.exception(log_format)
+sys.excepthook = exc_handler
+
 pages = [rides.main, concessions.main, water_park.main]
 
 
@@ -17,16 +34,22 @@ Here are the options(select using the number):
 """)
 
 
+import logging
 while True:
     try:
         os.system('cls')
         homepage()
-        selection = input("Select your option or q to quit. (numbers between 1 and 3)")
+        selection = input(
+            "Select your option or q to quit. (numbers between 1 and 3)")
         selection = int(selection) if selection != "q" else 'q'
     except ValueError:
-        print("Sorry! Invalid Input. Make sure you are only using numbers and not any other characters.")
+        print(
+            "Sorry! Invalid Input. Make sure you are only using numbers and not any other characters."
+        )
     else:
         if selection == "q":
             break
-        pages[selection-1]()
-
+        try:
+            pages[selection - 1]()
+        except IndexError:
+            print("Not a valid page, try again")

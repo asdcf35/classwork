@@ -4,7 +4,7 @@ import subprocess
 
 ask = input("Global 3.10?*(y/n)")
 if ask == 'y':
-    subprocess.run([r"C:\\'Program Files'\\Python310\\python.exe","-m",'pip','install','pandas'])
+    subprocess.run(["C:\\'Program Files'\\Python310\\python.exe","-m",'pip','install','pandas'])
 
 import pandas as pd
 # rides
@@ -32,8 +32,8 @@ def rides_from_file(filename="rides.csv") -> dict[str, Ride]:
         the filename or object that you wish to use(must work with read_csv)
     """
     dataframe = pd.read_csv(filename)
-    dataframe.iloc[:,2].fillna(inf)
-    dataframe.iloc[:,1].fillna(0)
+    dataframe.loc[:,'Min'].fillna(inf)
+    dataframe.loc[:,'Max'].fillna(0)
     dataframe = dataframe.to_dict('records')
     rides = {}
     for dictionary in dataframe:
