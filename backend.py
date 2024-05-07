@@ -2,7 +2,10 @@ from math import *
 import os
 import subprocess
 
-subprocess.run(["C:\Program" + " Files\Python310\python.exe","-m",'pip','install','pandas'])
+ask = input("Global 3.10?*(y/n)")
+if ask == 'y':
+    subprocess.run([r"C:\\'Program Files'\\Python310\\python.exe","-m",'pip','install','pandas'])
+
 import pandas as pd
 # rides
 class Ride:
@@ -41,4 +44,3 @@ class Restaurant:
     def __init__(self, filename) -> None:
         file = pd.read_csv(filename)
         file.to_dict('records')
-        
