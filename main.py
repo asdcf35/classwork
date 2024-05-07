@@ -2,7 +2,8 @@ import rides
 import concessions
 import water_park
 import time
-pages = [rides.old, concessions.main, water_park.main]
+import os
+pages = [rides.main, concessions.main, water_park.main]
 
 
 def homepage():
@@ -18,6 +19,8 @@ Here are the options(select using the number):
 
 while True:
     try:
+        os.system('cls')
+        homepage()
         selection = input("Select your option or q to quit. (numbers between 1 and 3)")
         selection = int(selection) if selection != "q" else 'q'
     except ValueError:
@@ -26,3 +29,4 @@ while True:
         if selection == "q":
             break
         pages[selection-1]()
+

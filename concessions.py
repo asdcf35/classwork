@@ -1,4 +1,4 @@
 import os
 def main(): 
-    os.clear()
+    os.system('cls')
     print("This is concessions")
