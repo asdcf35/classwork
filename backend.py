@@ -85,7 +85,7 @@ class Restaurant:
         console.print(f"Menu", justify="center")
         console.print(f'{"":-^24}', justify='center')
         for food_item in self.items:
-            print(f"{food_item.name} {" - ":^9} {food_item.cost}")
+            console.print(f"{food_item.name} {" - ":^9} {food_item.cost}", justify='center')
 
 
 if __name__ == '__main__':
