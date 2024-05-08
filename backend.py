@@ -1,7 +1,7 @@
 from math import *
 import os
 import subprocess
-
+from rich.console import Console
 ask = input("Global 3.10?*(y/n)")
 if ask == 'y':
     subprocess.run(["C:\\'Program Files'\\Python310\\python.exe","-m",'pip','install','pandas','colorama'])
@@ -42,8 +42,23 @@ def rides_from_file(filename="rides.csv") -> dict[str, Ride]:
 
 
 class Food_Item:
-
     def __init__(self, name, cost, amount_left) -> None:
         self.name = name
-        self.cost = cost 
-        self.amount_left = amount_left 
+        self.cost = cost
+        self.amount_left = amount_left
+
+
+class Restaurant:
+
+    def __init__(self, name, open, filename) -> None:
+        self.name = name
+        self.open = open
+        dataframe = pd.read_csv(filename)
+        self.item_names = tuple(dataframe.xs('Items'))
+        self.items = [
+            Food_Item(self.item_names[i], dataframe.loc[i, 'Price'],
+                      dataframe.loc[i, 'Amount Left'])
+            for i in range(len(self.item_names))
+        ]
+    
+    def display()
