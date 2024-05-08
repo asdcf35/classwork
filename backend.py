@@ -72,7 +72,6 @@ class Restaurant:
         self.open = open
         dataframe = pd.read_csv(filename)
         self.item_names = tuple(dataframe.loc[:, "Items"])
-        print(dataframe)
         self.items = [
             Food_Item(
                 self.item_names[i],
