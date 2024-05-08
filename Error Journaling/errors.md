@@ -8,4 +8,4 @@
 - checked to see if I used the wrong number
 - checked to see if my expression inside was working
 - looked over the input(saw the mistake: I entered 12 instead of 1, causing the error)
-**Resolution:** put the code in a try-catch block, prints the 
+**Resolution:** put the code in a try-catch block, prints a message saying the number entered was invalid

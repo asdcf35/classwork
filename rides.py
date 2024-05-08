@@ -13,8 +13,10 @@ import msvcrt
 # -----------------------------------------------------
 # User Made Imports
 from backend import *
+from rich.console import Console
 # -----------------------------------------------------
-
+console = Console()
+ride_desc_console = Console()
 
 def disp_ride(ride: Ride) -> None:
     """
@@ -25,9 +27,9 @@ def disp_ride(ride: Ride) -> None:
     """
     os.system("cls")
     print("Ride:", ride.name)
-    print(f'{ride.desc}',)
+    ride_desc_console.print(f'{ride.desc}',justify='center')
     print("\n\n\n")
-    print("Hit q to quit.")
+    console.print("Hit q to return back.",justify='center')
     while True:
         if msvcrt.kbhit():
             key = msvcrt.getch().decode('ASCII')
@@ -49,7 +51,7 @@ def main():
         try:
             # Print all the rides
             os.system('cls')
-            print("Welcome to the Amusement Park!")
+            print("Welcome to the Amusement Park!\n")
             sleep(1)
             print(list_of_rides)
             # ask the user which ride they want to go to
@@ -67,21 +69,28 @@ def main():
             else:
                 # set user_ride to the name of the ride(stored in the specific index of the keys of the rides)
                 user_ride = list(rides.keys())[int(user_ride) - 1]
+                print(user_ride)
 
         except ValueError:
             print("Input is invalid. Please try again.")
         else:
             # check if there is any age restrictions(if it is not 0 and inf)
-            if rides[user_ride].age_range == (0, inf):
+            if rides[user_ride].age_range == (0, 999999999):
                 disp_ride(rides[user_ride])
             else:
                 print(
                     f"The {user_ride} is a great choice! However we need to check your age."
                 )
-                age = input("What is your age? ")
+                age = int(input("What is your age? "))
 
                 # TODO: use age_check function(returns true if in the correct value, else False
                 if rides[user_ride].check_age(age):
                     disp_ride(rides[user_ride])
                 else:
-                    print("Sorry we can't let you go in.")
+                    print("Sorry we can't let you go in.\n")
+                    print("Hit q to return back.")
+                    while True:
+                        if msvcrt.kbhit():
+                            key = msvcrt.getch().decode('ASCII')
+                            if key == "q":
+                                break

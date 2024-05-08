@@ -4,7 +4,7 @@ import subprocess
 
 ask = input("Global 3.10?*(y/n)")
 if ask == 'y':
-    subprocess.run(["C:\\'Program Files'\\Python310\\python.exe","-m",'pip','install','pandas'])
+    subprocess.run(["C:\\'Program Files'\\Python310\\python.exe","-m",'pip','install','pandas','colorama'])
 
 import pandas as pd
 # rides
@@ -32,15 +32,25 @@ def rides_from_file(filename="rides.csv") -> dict[str, Ride]:
         the filename or object that you wish to use(must work with read_csv)
     """
     dataframe = pd.read_csv(filename)
-    dataframe.loc[:,'Min'].fillna(inf)
-    dataframe.loc[:,'Max'].fillna(0)
+    dataframe.loc[:, 'Max'] = dataframe.loc[:,'Max'].fillna(999999999)
+    dataframe.loc[:, 'Min'] = dataframe.loc[:,'Min'].fillna(0)
     dataframe = dataframe.to_dict('records')
     rides = {}
     for dictionary in dataframe:
         rides[dictionary["Name"]] = Ride(dictionary['Name'],(dictionary['Min'], dictionary['Max']), dictionary['Description'], dictionary['Working'])
     return rides
 
+
 class Restaurant:
+
     def __init__(self, filename) -> None:
-        file = pd.read_csv(filename)
-        file.to_dict('records')
+        #this is a menu of all the different
+        self.menu = pd.read_csv(filename)
+        self.orders = []
+        self.total = 0
+
+    def total(self) -> float:
+        return sum([
+            self.menu.loc[list(self.menu.xs('Name')).index(order), 'Cost']
+            for order in list(self.menu.xs('Name'))
+        ])

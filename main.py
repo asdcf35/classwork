@@ -3,23 +3,6 @@ import concessions
 import water_park
 import time
 import os
-#This is used to log all errors needed to fix(unhandled)
-import logging, sys, traceback, datetime
-
-logger = logging.getLogger('logger')
-fh = logging.FileHandler('test.log')
-logger.addHandler(fh)
-
-
-def exc_handler(exctype, value, tb):
-    """Prints Errors to a file, for later looking"""
-    log_format = f"""
-Error {datetime.datetime.today().strftime("%d/%m/%Y")}:
-{"".join(traceback.format_exception(exctype, value, tb))}
-    """
-    logger.exception(log_format)
-sys.excepthook = exc_handler
-
 pages = [rides.main, concessions.main, water_park.main]
 
 
