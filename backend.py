@@ -41,16 +41,5 @@ def rides_from_file(filename="rides.csv") -> dict[str, Ride]:
     return rides
 
 
-class Restaurant:
-
-    def __init__(self, filename) -> None:
-        #this is a menu of all the different
-        self.menu = pd.read_csv(filename)
-        self.orders = []
-        self.total = 0
-
-    def total(self) -> float:
-        return sum([
-            self.menu.loc[list(self.menu.xs('Name')).index(order), 'Cost']
-            for order in list(self.menu.xs('Name'))
-        ])
+class Food_Item:
+    def __init__(self, name, order, ) -> None:
