@@ -71,7 +71,8 @@ class Restaurant:
         self.name = name
         self.open = open
         dataframe = pd.read_csv(filename)
-        self.item_names = tuple(dataframe.xs("Items"))
+        self.item_names = tuple(dataframe.loc[:, "Items"])
+        print(dataframe)
         self.items = [
             Food_Item(
                 self.item_names[i],
@@ -85,7 +86,7 @@ class Restaurant:
         console.print(f"Menu", justify="center")
         console.print(f'{"":-^24}', justify='center')
         for food_item in self.items:
-            print(f"{self.items.name} {" - ":^9} {self.items.cost}")
+            print(f"{food_item.name} {" - ":^9} {food_item.cost}")
 
 
 if __name__ == '__main__':
