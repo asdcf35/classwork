@@ -84,5 +84,9 @@ class Restaurant:
         console.print(f"Welcome to {self.name}\n\n", justify="center")
         console.print(f"Menu", justify="center")
         console.print(f'{"":-^24}', justify='center')
-        for food_item in self.items: 
-            print()
+        for food_item in self.items:
+            print(f"{self.items.name} {" - ":^9} {self.items.cost}")
+
+
+if __name__ == '__main__':
+    Restaurant('Chicken Tenders', True, 'menu.csv').display_foods(Console())
