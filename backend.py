@@ -57,13 +57,13 @@ class Restaurant:
     def __init__(self, name, open, filename) -> None:
         self.name = name
         self.open = open
-        dataframe = pd.read_csv(filename)
-        self.item_names = tuple(dataframe.loc[:, "Items"])
+        self.dataframe = pd.read_csv(filename)
+        self.item_names = tuple(self.dataframe.loc[:, "Items"])
         self.items = [
             Food_Item(
                 self.item_names[i],
-                dataframe.loc[i, "Price"],
-                dataframe.loc[i, "Available"],
+                self.dataframe.loc[i, "Price"],
+                self.dataframe.loc[i, "Available"],
             ) for i in range(len(self.item_names))
         ]
 
@@ -71,8 +71,7 @@ class Restaurant:
         os.system("cls")
         console.print(f"Welcome to {self.name}\n\n", justify="center")
         console.print(f"Menu", justify="center")
-        console.print(f'{"":-^24}', justify='center')
-        for food_item in self.items:
-            console.print(f"{food_item.name:<max([len(x) for x in self.item_names])} - {food_item.cost}", justify='center')
+        console.print(f'{"":-^30}', justify='center')
+        print_half = self.dataframe.get(['Items', 'Price'])
+        console.print(print_half.to_string(index=False), justify="center")
 
- 
