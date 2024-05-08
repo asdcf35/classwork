@@ -42,4 +42,8 @@ def rides_from_file(filename="rides.csv") -> dict[str, Ride]:
 
 
 class Food_Item:
-    def __init__(self, name, order, ) -> None:
+
+    def __init__(self, name, cost, amount_left) -> None:
+        self.name = name
+        self.cost = cost 
+        self.amount_left = amount_left 
