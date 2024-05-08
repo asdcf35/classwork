@@ -3,6 +3,10 @@ import concessions
 import water_park
 import time
 import os
+import sys
+
+if "idlelib" in sys.modules:
+    print("The code will not work as intended.")
 pages = [rides.main, concessions.main, water_park.main]
 
 
@@ -12,12 +16,13 @@ def homepage():
     print("""
 Here are the options(select using the number):
     1. Rides
-    2. Concessions
+    2. Concessions  
     3. Water Park
 """)
 
+# Password setup
 
-import logging
+
 while True:
     try:
         os.system('cls')

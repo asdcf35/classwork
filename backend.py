@@ -1,23 +1,10 @@
 from math import *
-import os
+import sys
 import subprocess
+import os
+
 from rich.console import Console
-
-ask = input("Global 3.10?*(y/n)")
-if ask == "y":
-    subprocess.run(
-        [
-            "C:\\'Program Files'\\Python310\\python.exe",
-            "-m",
-            "pip",
-            "install",
-            "pandas",
-            "colorama",
-        ]
-    )
-
 import pandas as pd
-
 
 # rides
 class Ride:
@@ -76,17 +63,16 @@ class Restaurant:
             Food_Item(
                 self.item_names[i],
                 dataframe.loc[i, "Price"],
-                dataframe.loc[i, "Amount Left"],
+                dataframe.loc[i, "Available"],
             ) for i in range(len(self.item_names))
         ]
 
     def display_foods(self, console: Console, discount=0) -> None:
+        os.system("cls")
         console.print(f"Welcome to {self.name}\n\n", justify="center")
         console.print(f"Menu", justify="center")
         console.print(f'{"":-^24}', justify='center')
         for food_item in self.items:
-            console.print(f"{food_item.name} {" - ":^9} {food_item.cost}", justify='center')
+            console.print(f"{food_item.name:<max([len(x) for x in self.item_names])} - {food_item.cost}", justify='center')
 
-
-if __name__ == '__main__':
-    Restaurant('Chicken Tenders', True, 'menu.csv').display_foods(Console())
+ 
