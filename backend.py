@@ -16,13 +16,11 @@ def quit_no_input():
             if key == "q":
                 break
 
-def check_value_error(check: function, else_function: function) -> None:
+def check_value_error(check: function) -> None:
     try:
         check()
     except ValueError:
         print("Not a valid input")
-    else:
-       else_function() 
 # rides
 class Ride:
     def __init__(self, name, age_range, desc, working) -> None:
