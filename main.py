@@ -6,6 +6,7 @@ import os
 import sys
 from rich.progress import track
 from random import *
+import backend
 
 if "idlelib" in sys.modules:
     print("The code will not work as intended.")
@@ -15,7 +16,7 @@ if "idlelib" in sys.modules:
 #all of my pages 
 pages = [rides.main, concessions.main, water_park.main]
 
-@ValueError
+@backend.check_value_error()
 def homepage():
     print("Welcome to Sriketh's Park, where fun doesn't exist.")
     time.sleep(1)
@@ -41,6 +42,7 @@ for step in track(range(0,100,5),"Processing..."):
     time.sleep(randint(100, 200)/1000)
 
 while True:
+    homepage()
     if selection == "q":
         break
     try:
