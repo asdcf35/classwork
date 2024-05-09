@@ -15,7 +15,9 @@ import msvcrt
 from backend import *
 from rich.console import Console
 # -----------------------------------------------------
+#creates a console class(this allows us to do more than what regular print does)
 console = Console()
+#creates another console class
 ride_desc_console = Console()
 
 def disp_ride(ride: Ride) -> None:
@@ -25,7 +27,9 @@ def disp_ride(ride: Ride) -> None:
     Parameters:
     ride : the current ride that is being used
     """
+    #clear the system
     os.system("cls")
+    #print the ride name
     print("Ride:", ride.name)
     ride_desc_console.print(f'{ride.desc}',justify='center')
     print("\n\n\n")

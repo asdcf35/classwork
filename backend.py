@@ -12,8 +12,6 @@ from textual.widgets import Header
 
 
 
-
-
 # rides
 class Ride:
     def __init__(self, name, age_range, desc, working) -> None:
