@@ -30,7 +30,7 @@ Here are the options(select using the number):
 password = "password"
 inputted = input("Enter Password")
 for step in track(range(100)):
-    do_step(step)
+    time.sleep(0.5)
 if inputted == password:
     print("welcome")
 else:
