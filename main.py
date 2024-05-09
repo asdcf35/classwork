@@ -28,8 +28,13 @@ Here are the options(select using the number):
 
 # Password setup
 password = "password"
-
-
+inputted = input("Enter Password")
+for step in track(range(100)):
+    do_step(step)
+if inputted == password:
+    print("welcome")
+else:
+    print('Not welcome')
 while True:
     try:
         os.system('cls')
