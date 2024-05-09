@@ -7,7 +7,6 @@
 # Built in Imports
 import os
 from time import sleep
-from math import inf
 import msvcrt
 
 # -----------------------------------------------------
@@ -78,7 +77,7 @@ def main():
         except ValueError:
             print("Input is invalid. Please try again.")
         else:
-            # check if there is any age restrictions(if it is not 0 and inf)
+            # check if there is any age restrictions(if it is not 0 and obscenely high number) 
             if rides[user_ride].age_range == (0, 999999999):
                 disp_ride(rides[user_ride])
             else:

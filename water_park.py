@@ -9,7 +9,6 @@ import os
 from time import sleep
 from math import inf
 import msvcrt
-
 # -----------------------------------------------------
 # User Made Imports
 from backend import *
