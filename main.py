@@ -15,7 +15,7 @@ if "idlelib" in sys.modules:
 #all of my pages 
 pages = [rides.main, concessions.main, water_park.main]
 
-
+@ValueError
 def homepage():
     print("Welcome to Sriketh's Park, where fun doesn't exist.")
     time.sleep(1)
@@ -25,6 +25,14 @@ Here are the options(select using the number):
     2. Concessions  
     3. Water Park
 """)
+    os.system('cls')
+    homepage()
+    selection = input(
+        "Select your option or q to quit. (numbers between 1 and 3)"
+        )
+    selection = int(selection) if selection != "q" else 'q'
+
+
 
 # Password setup
 password = "password"
@@ -33,22 +41,11 @@ for step in track(range(0,100,5),"Processing..."):
     time.sleep(randint(100, 200)/1000)
 
 while True:
+    if selection == "q":
+        break
     try:
-        os.system('cls')
-        homepage()
-        selection = input(
-            "Select your option or q to quit. (numbers between 1 and 3)"
-            )
-        selection = int(selection) if selection != "q" else 'q'
-    except ValueError:
-        print(
-            "Sorry! Invalid Input. Make sure you are only using numbers and not any other characters."
-        )
-    else:
-        if selection == "q":
-            break
-        try:
-            pages[selection - 1]()
-        except IndexError:
-            print("Not a valid page, try again")
+        pages[selection - 1]()
+    except IndexError:
+        print("Not a valid page, try again")
+        
 
