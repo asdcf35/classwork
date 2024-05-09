@@ -5,6 +5,7 @@ from rich.console import Console
 
 def main():
     while True:
+        os.clear()
         console = Console()
         restaurant_files = ["Burger City.csv", "Bread Bitez.csv"]
         restaurants = {}
@@ -20,11 +21,15 @@ def main():
         number = "q" if number == "q" else int(number) - 1
         if number == "q":
             break
-        restaurant_selected = list(restaurants.keys())[number]
-        restaurants[restaurant_selected].display_foods(console)
-        console.print("\n\nEnter q to go back to the restaurants", justify="center")
-        while True:
-            if msvcrt.kbhit():
-                key = msvcrt.getch().decode("ASCII")
-                if key == "q":
-                    break
+        try:
+            restaurant_selected = list(restaurants.keys())[number]
+        except ValueError:
+            print("The value is invalid, please try again.")
+        else:
+            restaurants[restaurant_selected].display_foods(console)
+            console.print("\n\nEnter q to go back to the restaurants", justify="center")
+            while True:
+                if msvcrt.kbhit():
+                    key = msvcrt.getch().decode("ASCII")
+                    if key == "q":
+                        break
