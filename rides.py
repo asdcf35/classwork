@@ -92,8 +92,4 @@ def main():
                 else:
                     print("Sorry we can't let you go in.\n")
                     print("Hit q to return back.")
-                    while True:
-                        if msvcrt.kbhit():
-                            key = msvcrt.getch().decode('ASCII')
-                            if key == "q":
-                                break
+                    quit_no_input()
