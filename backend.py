@@ -8,6 +8,15 @@ from rich.console import Console
 import pandas as pd
 
 
+def quit_no_input():
+    """A q"""
+    while True:
+        if msvcrt.kbhit():
+            key = msvcrt.getch().decode("ASCII")
+            if key == "q":
+                break
+
+
 # rides
 class Ride:
     def __init__(self, name, age_range, desc, working) -> None:

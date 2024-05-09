@@ -28,9 +28,4 @@ def main():
         else:
             restaurants[restaurant_selected].display_foods(console)
             console.print("\n\nEnter q to go back to the restaurants", justify="center")
-
-            while True:
-                if msvcrt.kbhit():
-                    key = msvcrt.getch().decode("ASCII")
-                    if key == "q":
-                        break
+            backend.quit_no_input()
