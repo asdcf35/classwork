@@ -5,7 +5,7 @@ import time
 import os
 import sys
 from rich.progress import track
-
+from random import *
 if "idlelib" in sys.modules:
     print("The code will not work as intended.")
     quit()
@@ -29,12 +29,9 @@ Here are the options(select using the number):
 # Password setup
 password = "password"
 inputted = input("Enter Password")
-for step in track(range(100)):
-    time.sleep(0.5)
-if inputted == password:
-    print("welcome")
-else:
-    print('Not welcome')
+for step in track(range(100),"Processing..."):
+    time.sleep(randint(100, 200)/1000)
+
 while True:
     try:
         os.system('cls')
