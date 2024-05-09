@@ -3,13 +3,9 @@ import sys
 import subprocess
 import os
 
+os.system('py -m pip install pandas rich')
 from rich.console import Console
 import pandas as pd
-
-from textual.app import App, ComposeResult
-from textual.widgets import Header
-
-
 
 
 # rides

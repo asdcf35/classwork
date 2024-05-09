@@ -25,10 +25,10 @@ def disp_ride(ride: Ride) -> None:
     ride : the current ride that is being used
     """
     os.system("cls")
-    print("Ride:", ride.name)
+    console.print("Ride:", ride.name,'\n', justify='center')
     ride_desc_console.print(f'{ride.desc}',justify='center')
     print("\n\n\n")
-    console.print("Hit q to return back.",justify='center')
+    console.print("Hit q to return back.",justify='center',style='blue')
     while True:
         if msvcrt.kbhit():
             key = msvcrt.getch().decode('ASCII')
@@ -40,7 +40,7 @@ def main():
     rides = rides_from_file("rides.csv")
 
     # create variable holding list of all rides
-    list_of_rides = "Here is a list of all the rides:\n"
+    list_of_rides = "Here is a list of all the water park rides:\n"
     # add all the rides (formatted: <<Index Number>>. <<Ride Name>>)
     for index, ride_name in enumerate(rides.keys()):
         list_of_rides += f"\t{index + 1:>2}. {ride_name}\n"
@@ -87,7 +87,7 @@ def main():
                     disp_ride(rides[user_ride])
                 else:
                     print("Sorry we can't let you go in.\n")
-                    print("Hit q to return back.")
+                    print("Hit q to return back.",style='green')
                     while True:
                         if msvcrt.kbhit():
                             key = msvcrt.getch().decode('ASCII')

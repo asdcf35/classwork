@@ -6,13 +6,13 @@ import os
 import sys
 from rich.progress import track
 from random import *
+
 if "idlelib" in sys.modules:
     print("The code will not work as intended.")
     quit()
 
 
-
-
+#all of my pages 
 pages = [rides.main, concessions.main, water_park.main]
 
 
@@ -28,8 +28,8 @@ Here are the options(select using the number):
 
 # Password setup
 password = "password"
-inputted = input("Enter Password")
-for step in track(range(100),"Processing..."):
+inputted = input("Enter Password(password for regular, admin for admin console): ")
+for step in track(range(0,100,5),"Processing..."):
     time.sleep(randint(100, 200)/1000)
 
 while True:
@@ -37,7 +37,8 @@ while True:
         os.system('cls')
         homepage()
         selection = input(
-            "Select your option or q to quit. (numbers between 1 and 3)")
+            "Select your option or q to quit. (numbers between 1 and 3)"
+            )
         selection = int(selection) if selection != "q" else 'q'
     except ValueError:
         print(
@@ -50,3 +51,4 @@ while True:
             pages[selection - 1]()
         except IndexError:
             print("Not a valid page, try again")
+
