@@ -1,11 +1,11 @@
 import backend
 import msvcrt
 from rich.console import Console
-
+import os
 
 def main():
     while True:
-        os.clear()
+        os.system('cls')
         console = Console()
         restaurant_files = ["Burger City.csv", "Bread Bitez.csv"]
         restaurants = {}

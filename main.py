@@ -4,9 +4,15 @@ import water_park
 import time
 import os
 import sys
+from rich.progress import track
 
 if "idlelib" in sys.modules:
     print("The code will not work as intended.")
+    quit()
+
+
+
+
 pages = [rides.main, concessions.main, water_park.main]
 
 
@@ -21,6 +27,7 @@ Here are the options(select using the number):
 """)
 
 # Password setup
+password = "password"
 
 
 while True:
