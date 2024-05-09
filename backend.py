@@ -6,6 +6,20 @@ import os
 from rich.console import Console
 import pandas as pd
 
+from textual.app import App, ComposeResult
+from textual.widgets import Header
+
+
+class HeaderApp(App):
+    def compose(self) -> ComposeResult:
+        yield Header()
+
+    def on_mount(self) -> None:
+        self.title = "Header Application"
+        self.sub_title = "With title and sub-title"
+
+
+
 
 # rides
 class Ride:
