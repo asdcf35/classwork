@@ -87,9 +87,5 @@ def main():
                     disp_ride(rides[user_ride])
                 else:
                     print("Sorry we can't let you go in.\n")
-                    print("Hit q to return back.",style='green')
-                    while True:
-                        if msvcrt.kbhit():
-                            key = msvcrt.getch().decode('ASCII')
-                            if key == "q":
-                                break
+                    console.print("Hit q to return back.",style='green')
+                    quit_no_input()

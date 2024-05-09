@@ -7,6 +7,7 @@ def main():
     while True:
         os.system('cls')
         console = Console()
+
         restaurant_files = ["Burger City.csv", "Bread Bitez.csv"]
         restaurants = {}
         for restaurant_file in restaurant_files:
