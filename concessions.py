@@ -10,9 +10,7 @@ def main():
         restaurant_files = ["Burger City.csv", "Bread Bitez.csv"]
         restaurants = {}
         for restaurant_file in restaurant_files:
-            restaurants[restaurant_file[:-4]] = backend.Restaurant(
-                restaurant_file[:-4], True, restaurant_file
-            )
+            restaurants[restaurant_file[:-4]] = backend.Restaurant(restaurant_file[:-4], True, restaurant_file)
 
         print("Here is all the restaurants we have:")
         for index, restaurant in enumerate(restaurants.keys(), 1):
