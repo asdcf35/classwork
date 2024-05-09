@@ -13,8 +13,9 @@ def main():
                 restaurant_file[:-4], True, restaurant_file
             )
 
+        print("Here is all the restaurants we have:")
         for index, restaurant in enumerate(restaurants.keys(), 1):
-            print(f"{index}, {restaurant}")
+            print(f"{index}. {restaurant}")
         number = input("Enter one of the restaurants(number only), or q to quit")
         number = "q" if number == "q" else int(number) - 1
         if number == "q":

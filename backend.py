@@ -6,6 +6,7 @@ import os
 from rich.console import Console
 import pandas as pd
 
+
 # rides
 class Ride:
     def __init__(self, name, age_range, desc, working) -> None:
@@ -46,10 +47,10 @@ def rides_from_file(filename="rides.csv") -> dict[str, Ride]:
 
 
 class Food_Item:
-    def __init__(self, name, cost, amount_left) -> None:
+    def __init__(self, name, cost, available) -> None:
         self.name = name
         self.cost = cost
-        self.amount_left = amount_left
+        self.available = available
 
 
 class Restaurant:
@@ -64,14 +65,14 @@ class Restaurant:
                 self.item_names[i],
                 self.dataframe.loc[i, "Price"],
                 self.dataframe.loc[i, "Available"],
-            ) for i in range(len(self.item_names))
+            )
+            for i in range(len(self.item_names))
         ]
 
     def display_foods(self, console: Console, discount=0) -> None:
         os.system("cls")
         console.print(f"Welcome to {self.name}\n\n", justify="center")
         console.print(f"Menu", justify="center")
-        console.print(f'{"":-^30}', justify='center')
-        print_half = self.dataframe.get(['Items', 'Price'])
+        console.print(f'{"":-^30}', justify="center")
+        print_half = self.dataframe.get(["Items", "Price"])
         console.print(print_half.to_string(index=False), justify="center")
-
