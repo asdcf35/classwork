@@ -1,4 +1,3 @@
-from tabnanny import check
 import rides
 import concessions
 import time
@@ -7,7 +6,7 @@ import sys
 from rich.progress import track
 from random import *
 import backend
-import ride_operator
+import ropertor
 if "idlelib" in sys.modules:
     print("The code will not work as intended.")
     quit()
@@ -35,7 +34,7 @@ while True:
         print("\n\nRide Operator Detected\n\n")
         for step in track(range(0, 100, 5), "Loading the Console..."):
             time.sleep(randint(100, 200) / 1000)
-        ride_operator.main()
+        ropertor.main()
         check_for_run = input("Do you want to check if the code fully runs?")
         if check_for_run == "y":
             print("Ok")
