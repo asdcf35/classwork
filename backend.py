@@ -9,6 +9,7 @@ from math import *
 import sys
 import subprocess
 import os
+import msvcrt # this is a thing that will only work for windows
 # -----------------------------------------------------
 os.system('py -m pip install pandas rich') #needed for the 3rd party imports
 # User Made Imports and 3rd party imports
@@ -35,6 +36,7 @@ def quit_no_input():
 # rides
 class Ride:
     """This is a Ride Object, it has different functions related to checking the age"""
+
     def __init__(self, name, age_range, desc, working) -> None:
         """Initializes the object. Gives it a name, age range, description, and if it is working or not"""
         self.name = name
@@ -43,13 +45,11 @@ class Ride:
         self.working = working
 
     def check_age(self, age) -> bool:
+        """Check if it is in the range"""
         return self.age_range[0] < age < self.age_range[1]
 
-    def working(self) -> None:
-        self.working = not self.working
 
-
-def rides_from_file(filename="rides.csv",admin=False) -> dict[str, Ride]:
+def rides_from_file(filename="rides.csv", admin=False) -> dict[str, Ride]:
     """
     Making Ride objects from a file
 
@@ -58,7 +58,9 @@ def rides_from_file(filename="rides.csv",admin=False) -> dict[str, Ride]:
     filename : str, path object or file-like object
         the filename or object that you wish to use(must work with read_csv)
     """
+    # creates a Pandas Dataframe from a filename
     dataframex = pd.read_csv(filename)
+    #locate all the rows where Working is equal to true(working in t)
     dataframex = dataframex.loc[dataframex["Working"] == True]
     dataframex.loc[:, "Max"] = dataframex.loc[:, "Max"].fillna(999999999)
     dataframex.loc[:, "Min"] = dataframex.loc[:, "Min"].fillna(0)
@@ -100,7 +102,7 @@ class Restaurant:
             for i in range(len(self.item_names))
         ]
 
-    def display_foods(self, console: Console, discount=0) -> None:
+    def display_foods(self, console, discount=0) -> None:
         os.system("cls")
         console.print(f"Welcome to {self.name}\n\n", justify="center")
         console.print(f"Menu", justify="center")

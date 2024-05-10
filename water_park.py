@@ -17,7 +17,7 @@ from rich.console import Console
 console = Console()
 ride_desc_console = Console()
 
-def disp_ride(ride: Ride) -> None:
+def disp_ride(ride) -> None:
     """
     Displays the ride in a presentable way
 
