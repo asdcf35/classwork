@@ -1,9 +1,7 @@
-from multiprocessing import Value
 import backend
 import pandas as pd
 
-import pandas
-
+import rich
 
 def main():
     # rides
@@ -88,7 +86,7 @@ def main():
     #print the edited csv
     print("Here is that data:", dataframe, sep="\n")
 
-    
+
     #print the rides
     dataframe.to_csv("rides.csv")
 
