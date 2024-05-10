@@ -1,19 +1,34 @@
+# Created By: Pranav Sure
+# Created Date: 5/10/2024
+# version = '1.0'
+# -----------------------------------------------------
+"""This file is a basic way for the user(and ride operator) to interact and pick where they will be going"""
+# -----------------------------------------------------
+# Built in Imports
 from math import *
 import sys
 import subprocess
 import os
-import msvcrt
-
-os.system('py -m pip install pandas rich')
-from rich.console import Console
+# -----------------------------------------------------
+os.system('py -m pip install pandas rich') #needed for the 3rd party imports
+# User Made Imports and 3rd party imports
+import rides
+import concessions
+import water_park
+import backend
+from rich.progress import track
 import pandas as pd
+# -----------------------------------------------------
 
 
 def quit_no_input():
-    """A way"""
+    """A function that quits the program when user hits q(but doesn't use the input function)"""
     while True:
+      #check if key has been pressed
         if msvcrt.kbhit():
-            key = msvcrt.getch().decode("ASCII")
+          #find out what key it is and store it to key
+            key = msvcrt.getch().decode('ASCII')
+          #if the key is q, then break
             if key == "q":
                 break
 
