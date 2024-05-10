@@ -30,33 +30,36 @@ while True:
         break
     else:
         print("Sorry, not the correct password")
-    if inputted == ride_operator_password:
-        print("\n\nRide Operator Detected\n\n")
-        for step in track(range(0, 100, 5), "Loading the Console..."):
-            time.sleep(randint(100, 200) / 1000)
-        ropertor.main()
-        check_for_run = input("Do you want to check if the code fully runs?")
-        if check_for_run == "y":
-            print("Ok")
-        else:
-            print("Goodbye!")
-            quit()
-    while True:
-        os.system('cls')
-        print("Welcome to Sriketh's Park, where fun doesn't exist.")
-        time.sleep(1)
-        print("""
-    Here are the options(select using the number):
-        1. Rides
-        2. Concessions  
-        3. Water Park
-    """)
-        selection = input(
-            "Select your option or q to quit. (numbers between 1 and 3)")
-        selection = int(selection) if selection != "q" else 'q'
-        if selection == "q":
-            break
-        try:
-            pages[selection - 1]()
-        except IndexError:
-            print("Not a valid page, try again")
+
+if inputted == ride_operator_password:
+    print("\n\nRide Operator Detected\n\n")
+    for step in track(range(0, 100, 5), "Loading the Console..."):
+        time.sleep(randint(100, 200) / 1000)
+    ropertor.main()
+    check_for_run = input("Do you want to check if the code fully runs?")
+    if check_for_run == "y":
+        print("Ok")
+    else:
+        print("Goodbye!")
+        quit()
+
+
+while True:
+    os.system('cls')
+    print("Welcome to Sriketh's Park, where fun doesn't exist.")
+    time.sleep(1)
+    print("""
+Here are the options(select using the number):
+    1. Rides
+    2. Concessions  
+    3. Water Park
+""")
+    selection = input(
+        "Select your option or q to quit. (numbers between 1 and 3)")
+    selection = int(selection) if selection != "q" else 'q'
+    if selection == "q":
+        break
+    try:
+        pages[selection - 1]()
+    except IndexError:
+        print("Not a valid page, try again")

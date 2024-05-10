@@ -2,6 +2,7 @@ from math import *
 import sys
 import subprocess
 import os
+import msvcrt
 
 os.system('py -m pip install pandas rich')
 from rich.console import Console
@@ -9,7 +10,7 @@ import pandas as pd
 
 
 def quit_no_input():
-    """A q"""
+    """A way"""
     while True:
         if msvcrt.kbhit():
             key = msvcrt.getch().decode("ASCII")
