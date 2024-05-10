@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 Items,Price,Available
 Mohammed Biryani,5,True
 Samosa,1000,True
 Karthik Biryani,3,True
 Pani Puri,6,True
+=======
+Items,Price,Available
+Mohammed Biryani,5,True
+Samosa,1000,True
+Karthik Biryani,3,True
+Pani Puri,6,True
+>>>>>>> b05040e63389436f9512e5310a701876bc83470b
