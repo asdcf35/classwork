@@ -24,17 +24,19 @@ import pandas as pd
 def quit_no_input():
     """A function that quits the program when user hits q(but doesn't use the input function)"""
     while True:
-      #check if key has been pressed
+        #check if key has been pressed
         if msvcrt.kbhit():
-          #find out what key it is and store it to key
+            #find out what key it is and store it to key
             key = msvcrt.getch().decode('ASCII')
-          #if the key is q, then break
+            #if the key is q, then break
             if key == "q":
                 break
 
 # rides
 class Ride:
+    """This is a Ride Object, it has different functions related to checking the age"""
     def __init__(self, name, age_range, desc, working) -> None:
+        """Initializes the object. Gives it a name, age range, description, and if it is working or not"""
         self.name = name
         self.age_range = age_range
         self.desc = desc
