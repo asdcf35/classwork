@@ -31,7 +31,7 @@ class Ride:
         self.working = not self.working
 
 
-def rides_from_file(filename="rides.csv") -> dict[str, Ride]:
+def rides_from_file(filename="rides.csv",admin=False) -> dict[str, Ride]:
     """
     Making Ride objects from a file
 
@@ -40,10 +40,11 @@ def rides_from_file(filename="rides.csv") -> dict[str, Ride]:
     filename : str, path object or file-like object
         the filename or object that you wish to use(must work with read_csv)
     """
-    dataframe = pd.read_csv(filename)
-    dataframe.loc[:, "Max"] = dataframe.loc[:, "Max"].fillna(999999999)
-    dataframe.loc[:, "Min"] = dataframe.loc[:, "Min"].fillna(0)
-    dataframe = dataframe.to_dict("records")
+    dataframex = pd.read_csv(filename)
+    dataframex = dataframex.loc[dataframex["Working"] == True]
+    dataframex.loc[:, "Max"] = dataframex.loc[:, "Max"].fillna(999999999)
+    dataframex.loc[:, "Min"] = dataframex.loc[:, "Min"].fillna(0)
+    dataframe = dataframex.to_dict("records")
     rides = {}
     for dictionary in dataframe:
         rides[dictionary["Name"]] = Ride(
@@ -52,7 +53,10 @@ def rides_from_file(filename="rides.csv") -> dict[str, Ride]:
             dictionary["Description"],
             dictionary["Working"],
         )
-    return rides
+    if admin == False:
+        return rides
+    else:
+        return rides, dataframex
 
 
 class Food_Item:

@@ -67,7 +67,6 @@ def main():
                     "Thank you for visiting the Amusement Park! Here's a gift for you!"
                 )
                 sleep(2)
-                # TODO: a pdf or html of them taking a picture with the camera
                 break
             else:
                 # set user_ride to the name of the ride(stored in the specific index of the keys of the rides)
