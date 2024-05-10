@@ -14,7 +14,7 @@ if "idlelib" in sys.modules:
 
 
 #all of my pages
-pages = [rides.main, concessions.main, water_park.main]
+pages = [rides.main, concessions.main]
 
 
 # Password setup
