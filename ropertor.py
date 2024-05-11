@@ -60,18 +60,18 @@ def main():
             print("\t4. Description - Long String")
             print("\t5. Working - Boolean")
 
-            #ask user to edit the format
-            edit_format = int(input("What do you want to change(1 - 5): "))
+            #ask user to edit the format(str, because it's easier)
+            edit_format = input("What do you want to change(1 - 5): ")
 
             #ask the user for the final amount
             change = input("What are you changing it to: ")
 
             #if they want to edit the name, change the name
-            if edit_format == 1:
+            if edit_format == '1':
                 dataframe.loc[row_to_edit, 'Name'] = change
 
             #check if they want to edit the min age
-            elif edit_format == 2:
+            elif edit_format == '2':
                 #check if the integer is an input
                 try:
                     change = int(change)
@@ -85,7 +85,7 @@ def main():
                     dataframe.loc[row_to_edit, 'Min'] = change
 
             #check if they want to edit the min age
-            elif edit_format == 3:
+            elif edit_format == '3':
                 #check if the integer is an input
                 try:
                     change = int(change)
@@ -99,11 +99,11 @@ def main():
                     dataframe.loc[row_to_edit, 'Max'] = change
 
             #check if they want to edit the description
-            elif edit_format == 4:
+            elif edit_format == '4':
                 dataframe.loc[row_to_edit, 'Description'] = change
 
             #check if the ride is working
-            elif edit_format == 5:
+            elif edit_format == '5':
                 #check if the change is not in true or false
                 if change.lower() not in ("true", "false"):
                     print("Sorry, not a valid input")
@@ -112,7 +112,9 @@ def main():
                 else:
                     change = False if change.lower() == "false" else True
                     dataframe.loc[row_to_edit, 'working'] = change
-            if user 
+            else:
+                print("Sorry not a valid input")
+                continue
             #print the edited csv
             print("Here is that data:", dataframe, sep="\n")
 
