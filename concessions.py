@@ -15,7 +15,7 @@ from rich.console import Console
 # -----------------------------------------------------
 
 def main():
-    """This is the concession's stand, where there will be """
+    """This is the concession's stand, where there will be many different types of restaurant"""
     while True:
         # clear terminal
         os.system('cls')
@@ -26,6 +26,7 @@ def main():
         restaurant_files = ("Burger City.csv", "Bread Bitez.csv",
                             "Biryani Garden.csv")
         
+        locations = 
         #the restaurant objects
         restaurants = {}
 
