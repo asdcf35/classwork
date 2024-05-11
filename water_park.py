@@ -17,6 +17,7 @@ from rich.console import Console
 console = Console()
 ride_desc_console = Console()
 
+
 def disp_ride(ride) -> None:
     """
     Displays the ride in a presentable way
@@ -25,15 +26,11 @@ def disp_ride(ride) -> None:
     ride : the current ride that is being used
     """
     os.system("cls")
-    console.print("Ride:", ride.name,'\n', justify='center')
-    ride_desc_console.print(f'{ride.desc}',justify='center')
+    console.print("Ride:", ride.name, '\n', justify='center')
+    ride_desc_console.print(f'{ride.desc}', justify='center')
     print("\n\n\n")
-    console.print("Hit q to return back.",justify='center',style='blue')
-    while True:
-        if msvcrt.kbhit():
-            key = msvcrt.getch().decode('ASCII')
-            if key == "q":
-                break
+    console.print("Hit q to return back.", justify='center', style='blue')
+    quit_no_input()
 
 
 def main():
