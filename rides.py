@@ -10,7 +10,7 @@ from time import sleep
 import msvcrt
 
 # -----------------------------------------------------
-# User Made Imports
+# User Made Imports and 3rd Party Imports
 from backend import *
 from rich.console import Console
 # -----------------------------------------------------
