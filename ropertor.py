@@ -51,14 +51,9 @@ def main():
             # set user_ride to the name of the ride(stored in the specific index of the keys of the rides)
             row_to_edit = dataframe.loc[dataframe["Name"] == list(rides.keys())
                                         [user_ride - 1]].index[0]
-
+            
             #list all the options(should not change no matter what)
             print("Options to change: ")
-            print("\t1. Name - String")
-            print("\t2. Min - Numbers")
-            print("\t3. Max - Number")
-            print("\t4. Description - Long String")
-            print("\t5. Working - Boolean")
 
             #ask user to edit the format(str, because it's easier)
             edit_format = input("What do you want to change(1 - 5): ")
