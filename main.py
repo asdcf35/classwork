@@ -19,6 +19,7 @@ pages = [rides.main, concessions.main]
 # Password setup
 password = "123"
 ride_operator_password = "ro123"
+os.system("cls")
 inputted = input("Enter Password(123 for regular, ro123 for ride operator console): ")
 
 for step in track(range(0, 100, 5), "Checking Password..."):
