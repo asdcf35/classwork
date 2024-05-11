@@ -70,7 +70,7 @@ def main():
                 break
             else:
                 # set user_ride to the name of the ride(stored in the specific index of the keys of the rides)
-                user_ride = list(rides.keys())[int(user_ride) - 1]
+                user_ride = list(rides.keys())[int(user_ride) - 1] if int(user_ride) - 1 <= len(rides) else raise ValueError()
                 print(user_ride)
 
         except ValueError:
