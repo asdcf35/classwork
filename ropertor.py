@@ -1,9 +1,11 @@
 import backend
 import pandas as pd
-
+import os
 import rich
 
+
 def main():
+    os.system("cls")
     # rides
     rides, dataframe = backend.rides_from_file("rides.csv", admin=True)
     list_of_rides = "Here is all the rides:\n"
@@ -85,7 +87,6 @@ def main():
 
     #print the edited csv
     print("Here is that data:", dataframe, sep="\n")
-
 
     #print the rides
     dataframe.to_csv("rides.csv")
