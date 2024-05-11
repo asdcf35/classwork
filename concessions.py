@@ -26,7 +26,7 @@ def main():
         restaurant_files = ("Burger City.csv", "Bread Bitez.csv",
                             "Biryani Garden.csv")
         
-        locations = 
+        locations = ('Beside 1984','Next to Scenic River Cruise','Near the Entrance')
         #the restaurant objects
         restaurants = {}
 
@@ -36,10 +36,10 @@ def main():
                 restaurant_file[:-4], True, restaurant_file)
             
         
-        #print all restaurants
+        #print all restaurants and locations
         print("Here is all the restaurants we have:")
         for index, restaurant in enumerate(restaurants.keys(), 1):
-            print(f"{index}. {restaurant}")
+            print(f"{index}. {restaurant} - {locations[index-1]}")
         
         #ask user for restaurant selection or q
         number = input(
