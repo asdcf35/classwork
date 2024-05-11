@@ -5,6 +5,7 @@
 """This file is a basic way for the user(ride operator) to have a way to interact and change the rides"""
 # -----------------------------------------------------
 # Built in Imports
+from re import I
 import time
 import os
 import sys
@@ -111,7 +112,7 @@ def main():
                 else:
                     change = False if change.lower() == "false" else True
                     dataframe.loc[row_to_edit, 'working'] = change
-
+            if user 
             #print the edited csv
             print("Here is that data:", dataframe, sep="\n")
 
