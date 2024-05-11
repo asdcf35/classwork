@@ -32,12 +32,8 @@ def disp_ride(ride) -> None:
     print("Ride:", ride.name)
     ride_desc_console.print(f'{ride.desc}',justify='center')
     print("\n\n\n")
-    console.print("Hit q to return back.",justify='center')
-    while True:
-        if msvcrt.kbhit():
-            key = msvcrt.getch().decode('ASCII')
-            if key == "q":
-                break
+    console.print("Hit q to return back.",justify='center', style="green")
+    quit_no_input()
 
 
 def main():
@@ -90,5 +86,5 @@ def main():
                     disp_ride(rides[user_ride])
                 else:
                     print("Sorry we can't let you go in.\n")
-                    print("Hit q to return back.")
+                    console.print("Hit q to return back.")
                     quit_no_input()
