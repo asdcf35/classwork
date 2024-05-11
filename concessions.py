@@ -7,13 +7,14 @@ import os
 def main():
     """This is the concession's stand, where there will be """
     while True:
-        # clear system
+        # clear terminal
         os.system('cls')
+        #create new Console item(a thing I use to format the display how i want it to look like)
         console = Console()
 
-        restaurant_files = [
-            "Burger City.csv", "Bread Bitez.csv", "Biryani Garden.csv"
-        ]
+        # the restaurants' menus(filenames)
+        restaurant_files = ("Burger City.csv", "Bread Bitez.csv",
+                            "Biryani Garden.csv")
 
         restaurants = {}
         for restaurant_file in restaurant_files:
