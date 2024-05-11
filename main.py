@@ -13,7 +13,6 @@ from random import *
 # User Made Imports and 3rd party imports
 import rides
 import concessions
-import water_park
 import backend
 from rich.progress import track
 # -----------------------------------------------------
@@ -81,12 +80,11 @@ if password_inputted in (password, ride_operator_password):
     Here are the options(select using the number):
         1. Rides
         2. Concessions  
-        3. Water Park
     """)
 
         #ask the user for numbers
         selection = input(
-            "Select your option or q to quit. (numbers between 1 and 3)")
+            "Select your option or q to quit. (numbers between 1 and 2)")
         try:
             #if not q, try to change selection to an integer, otherwise keep it
             selection = int(selection) if selection != "q" else 'q'
