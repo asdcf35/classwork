@@ -1,8 +1,18 @@
-import backend
-import msvcrt
-from rich.console import Console
+# Created By: Pranav Sure
+# Created Date: 3/12/2024
+# version = '1.0'
+# -----------------------------------------------------
+"""This file is a basic way for the user to interact and pick which ride they will be picking"""
+# -----------------------------------------------------
+# Built in Imports
 import os
+import msvcrt
 
+# -----------------------------------------------------
+# User Made Imports and 3rd Party Imports
+import backend
+from rich.console import Console
+# -----------------------------------------------------
 
 def main():
     """This is the concession's stand, where there will be """

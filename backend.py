@@ -6,18 +6,11 @@
 # -----------------------------------------------------
 # Built in Imports
 from math import *
-import sys
-import subprocess
 import os
 import msvcrt # this is a thing that will only work for windows
 # -----------------------------------------------------
 os.system('py -m pip install pandas rich') #needed for the 3rd party imports
 # User Made Imports and 3rd party imports
-import rides
-import concessions
-import water_park
-import backend
-from rich.progress import track
 import pandas as pd
 # -----------------------------------------------------
 

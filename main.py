@@ -13,7 +13,7 @@ from random import *
 # User Made Imports and 3rd party imports
 import rides
 import concessions
-import backend
+import roperator
 from rich.progress import track
 # -----------------------------------------------------
 
@@ -51,7 +51,7 @@ if password_inputted in (password, ride_operator_password):
             time.sleep(randint(100, 200) / 1000)
 
         #call the ride operator page
-        ride_operator.main()
+        roperator.main()
 
         #after, check if they want to see if the code fully runs
         check_for_run = input(
