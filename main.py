@@ -29,7 +29,7 @@ password = "123"
 ride_operator_password = "ro123"
 
 #Ask user for password
-inputted = input(
+password_inputted = input(
     "Enter Password(123 for regular, ro123 for ride operator console): ")
 
 
@@ -38,10 +38,10 @@ for step in track(range(0, 100, 5), "Checking Password..."):
     time.sleep(randint(100, 200) / 1000)
 
 #check if the password is either the passwod or the ride operator password
-if inputted in (password, ride_operator_password):
+if password_inputted in (password, ride_operator_password):
 
     #check if the password is the ride operator password
-    if inputted == ride_operator_password:
+    if password_inputted == ride_operator_password:
         print("\n\nRide Operator Detected\n\n")
         #similar to a sleep function(but looks cooler imho)
         for step in track(range(0, 100, 5), "Loading the Console..."):
@@ -96,7 +96,7 @@ if inputted in (password, ride_operator_password):
                 break
             #try and index the pages using the pages system
             try:
-                pages[abs(selection) - 1]()
+                pages[selection - 1]()
             #if indexerror(when the people put a number higher than 1)
             except IndexError:
                 print("Not a valid page, try again")
