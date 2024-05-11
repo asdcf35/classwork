@@ -17,6 +17,10 @@ import water_park
 import backend
 from rich.progress import track
 # -----------------------------------------------------
+
+#NOTE: This code is meant to run in a terminal, it has not been tested in IDLE.
+
+#checks if it is running in IDLE
 if "idlelib" in sys.modules:
     print("The code will not work as intended.")
     quit()
