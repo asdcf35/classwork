@@ -1,5 +1,5 @@
 ```mermaid
-flowchart
+graph 
     start((Start))
     clear(Clear the terminal)
     console(Create a new console object - for formating)
