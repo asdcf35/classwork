@@ -1,6 +1,4 @@
-# Error Journaling
-*This is all the errors we have*
+```mermaid
 
-## Python Errors:
 
-## Logic
+```
