@@ -26,11 +26,14 @@ def rules():
 8. Guests older than 80 years old are not permitted to engage in rides or attractions.
 9. Individuals prone to motion sickness or dizziness should avoid participating in certain rides.
 10. Pregnant guests are not allowed to partake in park activities.""")
+        
+        #ask user if they want to go back
+        quit2 = input('Do you want to go back? (y/n): ')
 
-        quit2 = input('Do you want to go back to the main page? (y/n): ')
-
-        if quit2.lower() != 'n':
+        if quit2.lower() == 'y':
             break
+        elif quit2.lower() == 'n':
+            quit()
 
 
 def hours():
