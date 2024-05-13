@@ -30,10 +30,14 @@ def rules():
         #ask user if they want to go back
         quit2 = input('Do you want to go back? (y/n): ')
 
+        #if they do, break the loop
         if quit2.lower() == 'y':
             break
+        #if they don't quit the whole program
         elif quit2.lower() == 'n':
             quit()
+        else:
+            print("Input is invalid, try again")
 
 
 def hours():
