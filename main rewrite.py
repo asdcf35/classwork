@@ -50,7 +50,7 @@ while True:
 ## actual main code
 while True:
     #tell user the date and time right now=
-    print()
+    print(datetime.now().st)
     #tell the options
 
     #ask the user for the option
