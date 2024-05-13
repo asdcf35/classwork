@@ -5,12 +5,12 @@
 """ This code is a simple way to tell the user all the rules and the operating hours of the themepark """
 #-------------------------
 # Built in Imports
-import datetime.time as t
+from datetime import time as t
 import os
 #-------------------------
 # User made Imports and 3rd party Imports
 import backend
-from ride.console import Console
+from rich.console import Console
 
 #-------------------------
 
@@ -38,8 +38,8 @@ def rules(console):
 def hours(console):
     """Prints hours of the park, and finds if it open or not"""
     os.system("cls")
-    opening_time = t.time(hour=11, minute=0)
-    closing_time = t.time(hour=20, minute=0)
+    opening_time = t(hour=11, minute=0)
+    closing_time = t(hour=20, minute=0)
     #print the opening times, and if it open or not
     console.print(f"The opening times of the park are from 11am to 8pm everyday. Right now it is {'open' if opening_time < t.now() and t.now() < closing_time else 'closed'}",justify='center')
     
