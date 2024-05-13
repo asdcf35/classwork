@@ -16,16 +16,16 @@ def rules():
     """prints the rules of the themepark and brings user back to main page if user chooses to """
     while True:
         print("""Here are the main rules in the theme park:
-            1. No sprinting
-            2. No littering/only throw food in the trash
-            3. Kee p hands, arms, legs, and feet inside the rides at all times
-            4. No making out on the rides (Why would you do that? We have hotels available)
-            5. Don't use cell phones on rides
-            6. No one younger than 3 on any rides
-            7. No one with health issues concerning heart issues
-            8. No one older than 80 years old
-            9. No motion sickness or dizziness
-            10. No pregnant mothers""")
+1. No running or jogging within the park premises.
+2. Dispose of all trash in designated bins; only throw food waste in trash receptacles.
+3. Keep hands, arms, legs, and feet inside the rides at all times.
+4. Maintain appropriate behavior; refrain from making out on rides (hotel accommodations are available).
+5. Cell phone usage is prohibited while on rides.
+6. Guests under the age of 3 are not permitted on any rides.
+7. Guests with heart conditions or related health issues should refrain from participating in park activities.
+8. Guests older than 80 years old are not permitted to engage in rides or attractions.
+9. Individuals prone to motion sickness or dizziness should avoid participating in certain rides.
+10. Pregnant guests are not allowed to partake in park activities.""")
 
         quit2 = input('Do you want to go back to the main page? (y/n): ')
 
@@ -47,7 +47,7 @@ def hours():
         #ask the user if they want to go back to the page 
         quit2 = input('Do you want to go back? (y/n): ')
         
-        #if the user types 'n', goes back to general
+        #if the user types 'y', goes back to general
         if quit2.lower() != 'n':
             break
 
