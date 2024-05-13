@@ -6,7 +6,7 @@
 #-------------------------
 # Built in Imports
 import time
-from ride.console import Console()
+from ride.console import Console
 #-------------------------
 # User made Imports
 #-------------------------
@@ -52,6 +52,8 @@ def hours():
             break
 
 def main():
+    #create console times
+    console = Console()
     while True:
         try:
             #ask user if they want to go to rules or park hours
@@ -62,13 +64,13 @@ def main():
             if chosen == 1:
                 print("Going to rules...")
                 time.sleep(1)
-                rules()
+                rules(console)
 
             #if user inputs 2, go to park_hours
             elif chosen == 2:
                 print("Going to park hours...")
                 time.sleep(1)
-                hours()
+                hours(console)
             
             #if the user chooses 3, quit to the main page
             elif chosen == 3:
