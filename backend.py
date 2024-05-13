@@ -101,5 +101,5 @@ class Restaurant:
         console.print(f"Welcome to {self.name}\n\n", justify="center")
         console.print(f"Menu", justify="center")
         console.print(f'{"":-^30}', justify="center")
-        print_half = self.dataframe.get(["Items", "Price"])
+        print_half = self.dataframe[(self.dataframe==True).any(axis=1)].loc['Price','Items']
         console.print(print_half.to_string(index=False), justify="center")
