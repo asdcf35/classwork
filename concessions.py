@@ -1,21 +1,31 @@
 # Created By: Pranav Sure
-# Created Date: 3/12/2024
+# Created Date: 5/10/2024
 # version = '1.0'
 # -----------------------------------------------------
 """This file is a basic way for the user to interact and pick which ride they will be picking"""
 # -----------------------------------------------------
 # Built in Imports
 import os
-import msvcrt
-
+import time
+from random import randint
 # -----------------------------------------------------
 # User Made Imports and 3rd Party Imports
 import backend
 from rich.console import Console
+from rich.progress import *
 # -----------------------------------------------------
 
 def main():
     """This is the concession's stand, where there will be many different types of restaurant"""
+    os.system('cls')
+    #print that ride operator is detected
+    print("\n\nRide Operator Detected\n\n")
+
+    #similar to a sleep function(but looks cooler imho)
+    for step in track(range(0, 100, 5), "Loading the Console..."):
+        time.sleep(randint(100, 200) / 1000)
+
+    #main code
     while True:
         # clear terminal
         os.system('cls')
@@ -25,18 +35,20 @@ def main():
         # the restaurants' menus(filenames)
         restaurant_files = ("Burger City.csv", "Bread Bitez.csv",
                             "Biryani Garden.csv")
-        
+
+        # the new locations 
         locations = ('Beside 1984','Next to Scenic River Cruise','Near the Entrance')
         #the restaurant objects
         restaurants = {}
 
         #convert restaurant menus to restaurant objects
         for restaurant_file in restaurant_files:
+            #remove the .csv from the filenames, and use it as the key(the name of the restaurant) to make a restaurant object
             restaurants[restaurant_file[:-4]] = backend.Restaurant(
                 restaurant_file[:-4], True, restaurant_file)
             
         
-        #print all restaurants and locations
+        #print all restaurants and locations(locations is at the same index as restaurant)
         print("Here is all the restaurants we have:")
         for index, restaurant in enumerate(restaurants.keys(), 1):
             print(f"{index}. {restaurant} - {locations[index-1]}")
@@ -50,6 +62,7 @@ def main():
             number = "q" if number == "q" else int(number) - 1
             if number == "q":
                 break
+        
             #raise an error if the number is greater than the highest index in the restaurants dictionary
             if int(number) - 1 > len(restaurants) - 1:
                 raise ValueError
@@ -67,3 +80,17 @@ def main():
                           justify="center", style='green')
             #press q -> back to the restaurants
             backend.quit_no_input()
+    
+
+
+    #after, check if they want to see if the code fully runs
+    check_for_run = input(
+        "Do you want to check if the code fully runs?('y' for yes, anything else for no)"
+    )
+    #if yes('y'), continue onto the actual code
+    if check_for_run == "y":
+        print("Ok")
+    #else(anything else) -> print goodbye and exit code
+    else:
+        print("Goodbye!")
+        quit()
