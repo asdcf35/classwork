@@ -31,11 +31,22 @@ ride_operator_password = "r123"
 password_inputted = input("Input '123' to explore the park, or input 'r123' to check on the status of the rides")
 #progress bar as wait
 
+#password check loop
+while True:
+    #if user inputted customer password -> greet him
+    if password_inputted == customer_password:
+        print("Welcome to Sriketh's Park, where fun doesn't exist.")
+        break
+
+    #else, if user password inputted a ride operator password, navigate to the ride operator page(by calling the roperator function)
+    elif password_inputted == ride_operator_password:
+        roperator.main()
+
+    #tell user that the password is wrong
+    else:
+        print("Entered the wrong password, make sure you are entering the password correctly.")
 
 
-#if user inputted customer password -> let him in regular
-if password_inputted == customer_password:
-    print("Welcome to Sriketh's Park, where fun doesn't exist.")
-else:
-    print("")
 ## actual main code
+while True:
+    
