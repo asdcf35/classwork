@@ -44,6 +44,7 @@ def hours(console):
     #print the opening times, and if it open or not
     console.print(f"The opening times of the park are from 11am to 8pm everyday. Right now it is {'open' if opening_time < dt.now().time() and dt.now().time() < closing_time else 'closed'}",justify='center')
     
+    #print stating that you need to enter q to go back(this is not an input, because of the statement below)
     console.print("Enter q to go back to the general park info page.", style='green',justify='center')
 
     #quit with no input, and i don't even need to loop as the user can press any key he wants, and the thing will not work until q has been pressed
@@ -51,12 +52,12 @@ def hours(console):
 
 
 def main():
-    #clear the terminal
-    os.system("cls")
-
     #create console times
     console = Console()
+
     while True:
+        #clear the terminal
+        os.system("cls")
         try:
             #ask user if they want to go to rules or park hours
             chosen = int(
