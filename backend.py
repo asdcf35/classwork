@@ -39,7 +39,7 @@ class Ride:
 
     def check_age(self, age) -> bool:
         """Check if it is in the range"""
-        return self.age_range[0] < age < self.age_range[1]
+        return self.age_range[0] < age and age < self.age_range[1]
 
 
 def rides_from_file(filename="rides.csv", admin=False) -> dict[str, Ride]:
