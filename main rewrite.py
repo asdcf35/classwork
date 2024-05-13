@@ -6,7 +6,7 @@
 # -----------------------------------------------------
 # Built in Imports
 import time
-import datetime
+from datetime import datetime
 import os
 import sys
 from random import *
@@ -49,4 +49,11 @@ while True:
 
 ## actual main code
 while True:
-    
+    #tell user the date and time right now=
+    print()
+    #tell the options
+
+    #ask the user for the option
+
+    #navigate to that page(or exit)
+    pass
