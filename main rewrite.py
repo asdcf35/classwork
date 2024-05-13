@@ -50,7 +50,7 @@ while True:
 ## actual main code
 while True:
     #tell user the date and time right now=
-    print(datetime.now().st)
+    print(datetime.now().strftime("Current Date and Time: <<month>> <<day>>, <<year>> %I:%M:%S %p"))
     #tell the options
 
     #ask the user for the option
