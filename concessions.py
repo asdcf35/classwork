@@ -17,13 +17,7 @@ from rich.progress import *
 
 def main():
     """This is the concession's stand, where there will be many different types of restaurant"""
-    os.system('cls')
-    #print that ride operator is detected
-    print("\n\nRide Operator Detected\n\n")
-
-    #similar to a sleep function(but looks cooler imho)
-    for step in track(range(0, 100, 5), "Loading the Console..."):
-        time.sleep(randint(100, 200) / 1000)
+   
 
     #main code
     while True:

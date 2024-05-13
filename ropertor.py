@@ -24,6 +24,14 @@ import pandas as pd
 
 
 def main():
+    os.system('cls')
+    #print that ride operator is detected
+    print("\n\nRide Operator Detected\n\n")
+
+    #similar to a sleep function(but looks cooler imho)
+    for step in track(range(0, 100, 10), "Loading the Console..."):
+        time.sleep(randint(100, 200) / 1000)
+
     while True:
         """Interface that allows the ride operator to change the status of the rides, working or not working"""
         os.system("cls")  # system clear
