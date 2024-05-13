@@ -5,12 +5,13 @@
 """ This code is a simple way to tell the user all the rules and the operating hours of the themepark """
 #-------------------------
 # Built in Imports
-import time
 import datetime.time as t
-from ride.console import Console
+import os
 #-------------------------
-# User made Imports
+# User made Imports and 3rd party Imports
 import backend
+from ride.console import Console
+
 #-------------------------
 
 
@@ -20,7 +21,7 @@ def rules(console):
 1. No running or jogging within the park premises.
 2. Dispose of all trash in designated bins; only throw food waste in trash cans.
 3. Keep hands, arms, legs, and feet inside the rides at all times.
-4. Maintain appropriate behavior; refrain from making out on rides (hotel accommodations are available).
+4. Maintain appropriate behavior; refrain from making out on rides (there are hotels nearby) 
 5. Cell phone usage is prohibited while on rides.
 6. Guests under the age of 3 are not permitted on any rides.
 7. Guests with heart conditions or related health issues should refrain from participating in park activities.
@@ -36,16 +37,16 @@ def rules(console):
 
 def hours(console):
     """Prints hours of the park, and finds if it open or not"""
+    os.system("cls")
     opening_time = t.time(hour=11, minute=0)
     closing_time = t.time(hour=20, minute=0)
-    while True:
-        #print the opening times, and if it open or not
-        console.print(f"The opening times of the park are from 11am to 8pm everyday. Right now it is {'open' if opening_time < t.now() and t.now() < closing_time else 'closed'}",justify='center')
-        
-        console.print("Enter q to go back to the general park info page.", style='green',justify='center')
+    #print the opening times, and if it open or not
+    console.print(f"The opening times of the park are from 11am to 8pm everyday. Right now it is {'open' if opening_time < t.now() and t.now() < closing_time else 'closed'}",justify='center')
+    
+    console.print("Enter q to go back to the general park info page.", style='green',justify='center')
 
-        #quit with no input, and i don't even need to loop as the user can press any key he wants, and the thing will not work until q has been pressed
-        backend.quit_no_input()
+    #quit with no input, and i don't even need to loop as the user can press any key he wants, and the thing will not work until q has been pressed
+    backend.quit_no_input()
 
 
 def main():
@@ -75,3 +76,6 @@ def main():
 
         except ValueError:
             print("Invalid choice, try again")
+
+if __name__ == "__main__":
+    main()
