@@ -14,6 +14,7 @@ from random import *
 # User Made Imports and 3rd party imports
 import rides
 import concessions
+import general
 import roperator
 from rich.progress import track
 # -----------------------------------------------------
@@ -49,11 +50,16 @@ while True:
 
 ## actual main code
 while True:
+    #a tuple containing all the pages we can navigate to(and quit, to quit the program)
+    pages = (rides.main, concessions.main, general.main, quit)
     #tell user the date and time right now=
-    print(datetime.now().strftime("Current Date and Time: <<month>> <<day>>, <<year>> %I:%M:%S %p"))
-    #tell the options
+    print(datetime.now().strftime("Current Date and Time: %B %-d, %Y %I:%M:%S %p"))
+    
+    #tell the options, and ask user for their input
+    navigation = int(input("Here are the options: 1.Go to Rides\n2. Go to Concessions\n3. Go to Park Rules and Timings\n4. Exit"))
 
-    #ask the user for the option
-
+    #if the number the user provides is not a good number 
+    if navigation > len(pages):
+        raise ValueError
     #navigate to that page(or exit)
     pass
