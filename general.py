@@ -6,6 +6,7 @@
 #-------------------------
 # Built in Imports
 from datetime import time as t
+from datetime import datetime as dt
 import os
 #-------------------------
 # User made Imports and 3rd party Imports
@@ -41,7 +42,7 @@ def hours(console):
     opening_time = t(hour=11, minute=0)
     closing_time = t(hour=20, minute=0)
     #print the opening times, and if it open or not
-    console.print(f"The opening times of the park are from 11am to 8pm everyday. Right now it is {'open' if opening_time < t.now() and t.now() < closing_time else 'closed'}",justify='center')
+    console.print(f"The opening times of the park are from 11am to 8pm everyday. Right now it is {'open' if opening_time < dt.now().time() and dt.now().time() < closing_time else 'closed'}",justify='center')
     
     console.print("Enter q to go back to the general park info page.", style='green',justify='center')
 
@@ -50,6 +51,9 @@ def hours(console):
 
 
 def main():
+    #clear the terminal
+    os.system("cls")
+
     #create console times
     console = Console()
     while True:
