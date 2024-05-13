@@ -58,8 +58,9 @@ while True:
     #tell the options, and ask user for their input
     navigation = int(input("Here are the options: 1.Go to Rides\n2. Go to Concessions\n3. Go to Park Rules and Timings\n4. Exit"))
 
-    #if the number the user provides is not a good number 
+    #if the number the user provides is not a good number
     if navigation > len(pages):
         raise ValueError
-    #navigate to that page(or exit)
+    #navigate to that page by using the index given[calculated by subtracting 1 from the number given](or exit)
+    pages[navigation - 1]()
     pass
