@@ -5,6 +5,5 @@ flowchart
     restaurantFiles(store all filenames of the menus in a tuple called restaurant_files) -->
     locations(store all the locations of the restaurants in a tuple called locations) -->
     emptyRestaurant(store empty dictionary to restaurant) -->
-    lastItemInRestaurantFiles{Is this the last item in restaurant files?} --|No|>
-    createRestaurantItem(create new restaurant object at index restaurant name)
-    
+    lastItemInRestaurantFiles{Is this the last item in restaurant files?} --> |Yes| lastItemIn
+    lastItemInRestaurantFiles --> |No| createRestaurantItem(create new restaurant object at index restaurant name) --> lastItemInRestaurantFiles
