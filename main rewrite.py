@@ -27,7 +27,15 @@ from rich.progress import track
 customer_password = "123"
 ride_operator_password = "r123"
 #ask for password
-password_inputted = ""
-#check passcodes
 
+password_inputted = input("Input '123' to explore the park, or input 'r123' to check on the status of the rides")
+#progress bar as wait
+
+
+
+#if user inputted customer password -> let him in regular
+if password_inputted == customer_password:
+    print("Welcome to Sriketh's Park, where fun doesn't exist.")
+else:
+    print("")
 ## actual main code
