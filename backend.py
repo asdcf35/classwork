@@ -74,6 +74,7 @@ def rides_from_file(filename="rides.csv", admin=False) -> dict[str, Ride]:
 
 class Food_Item:
     def __init__(self, name, cost, available) -> None:
+        """Initalize the food item object, it has 3 attributes: name, cost, and if it available"""
         self.name = name
         self.cost = cost
         self.available = available
