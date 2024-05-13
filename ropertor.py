@@ -50,7 +50,8 @@ def main():
                 input(
                     "Pick the ride you want to edit, or type q if you want to exit.(numbers only)\n"
                 ))
-            if user_ride - 1 > len(rides):
+            #if the input given is greater than the length of the rides, give a value error
+            if user_ride> len(rides):
                 raise ValueError
         except ValueError:
             print("Not a valid input, try again")
