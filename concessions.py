@@ -88,3 +88,6 @@ def main():
     else:
         print("Goodbye!")
         quit()
+
+if __name__ == '__main__':
+    main()

@@ -107,7 +107,7 @@ class Restaurant:
         self.items = [
             Food_Item(
                 self.item_names[i],
-                self.dataframe.loc[i, "Price"],
+                self.dataframe.loc[i, "Price (in dollars)"],
                 self.dataframe.loc[i, "Available"],
             )
             for i in range(len(self.item_names))
@@ -124,8 +124,8 @@ class Restaurant:
         console.print(f"Menu", justify="center")
         console.print(f'{"":-^30}', justify="center")
 
-        #get the lines of any dataframe that contains True(so all items that are available) and use only the Price column, and the Items 
-        print_half = self.dataframe[(self.dataframe==True).any(axis=1)].loc['Price','Items']
+        #get the lines of any dataframe that contains True(so all items that are available) and use only the Price (in dollars) column, and the Items 
+        print_half = self.dataframe[(self.dataframe==True).any(axis=1)].loc['Items','Price (in dollars)']
 
         #print the query(which creates a new dataframe) in a centered way
         console.print(print_half.to_string(index=False), justify="center")
