@@ -24,6 +24,9 @@ if "idlelib" in sys.modules:
     print("The code will not work as intended.")
     quit()
 
+
+
+
 #Create list named main storing all the functions(pages)
 pages = [rides.main, concessions.main]
 
@@ -46,6 +49,7 @@ if password_inputted in (password, ride_operator_password):
     #check if the password is the ride operator password
     if password_inputted == ride_operator_password:
         print("\n\nRide Operator Detected\n\n")
+
         #similar to a sleep function(but looks cooler imho)
         for step in track(range(0, 100, 5), "Loading the Console..."):
             time.sleep(randint(100, 200) / 1000)
