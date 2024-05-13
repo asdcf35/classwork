@@ -125,7 +125,7 @@ class Restaurant:
         console.print(f'{"":-^30}', justify="center")
 
         #get the lines of any dataframe that contains True(so all items that are available) and use only the Price (in dollars) column, and the Items 
-        print_half = self.dataframe[(self.dataframe==True).any(axis=1)].loc['Items','Price (in dollars)']
+        print_half = pd.DataFrame(self.dataframe[(self.dataframe==True).any(axis=1)])
 
         #print the query(which creates a new dataframe) in a centered way
         console.print(print_half.to_string(index=False), justify="center")
