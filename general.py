@@ -52,6 +52,7 @@ def hours(console):
 
 
 def main():
+    """The main files in the main function"""
     #create console times
     console = Console()
 
