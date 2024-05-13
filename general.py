@@ -1,5 +1,5 @@
-# created by : Prasant Neupane
-# date created : 5/6/24 10:50
+# created by : Pranav Sure
+# date created : 5/10/24
 # version = '1.0'
 #-------------------------
 """ This code is a simple way to tell the user all the rules and the operating hours of the themepark """
@@ -10,15 +10,15 @@ import datetime.time as t
 from ride.console import Console
 #-------------------------
 # User made Imports
+import backend
 #-------------------------
 
 
 def rules(console):
     """prints the rules of the themepark and brings user back to main page if user chooses to """
-    while True:
-        console.print("""Here are the main rules in the theme park:
+    console.print("""Here are the main rules in the theme park:
 1. No running or jogging within the park premises.
-2. Dispose of all trash in designated bins; only throw food waste in trash receptacles.
+2. Dispose of all trash in designated bins; only throw food waste in trash cans.
 3. Keep hands, arms, legs, and feet inside the rides at all times.
 4. Maintain appropriate behavior; refrain from making out on rides (hotel accommodations are available).
 5. Cell phone usage is prohibited while on rides.
@@ -27,19 +27,12 @@ def rules(console):
 8. Guests older than 80 years old are not permitted to engage in rides or attractions.
 9. Individuals prone to motion sickness or dizziness should avoid participating in certain rides.
 10. Pregnant guests are not allowed to partake in park activities.""", justify="center")
-        
-        #ask user if they want to go back
-        quit2 = input('Do you want to go back? (y/n): ')
+    
+    #print that q must be pressed in order to exit
+    console.print("Enter q to go back to the general park info page.", style='green',justify='center')
 
-        #if they do, break the loop
-        if quit2.lower() == 'y':
-            break
-        #if they don't quit the whole program
-        elif quit2.lower() == 'n':
-            quit()
-        else:
-            print("Input is invalid, try again")
-
+    #quit with no input, and i don't even need to loop as the user can press any key he wants, and the thing will not work until q has been pressed
+    backend.quit_no_input()
 
 def hours(console):
     """Prints hours of the park, and finds if it open or not"""
@@ -49,17 +42,10 @@ def hours(console):
         #print the opening times, and if it open or not
         console.print(f"The opening times of the park are from 11am to 8pm everyday. Right now it is {'open' if opening_time < t.now() and t.now() < closing_time else 'closed'}",justify='center')
         
-        #ask user if they want to go back
-        quit2 = input('Do you want to go back? (y/n): ')
+        console.print("Enter q to go back to the general park info page.", style='green',justify='center')
 
-        #if they do, break the loop
-        if quit2.lower() == 'y':
-            break
-        #if they don't quit the whole program
-        elif quit2.lower() == 'n':
-            quit()
-        else:
-            print("Input is invalid, try again") 
+        #quit with no input, and i don't even need to loop as the user can press any key he wants, and the thing will not work until q has been pressed
+        backend.quit_no_input()
 
 
 def main():
