@@ -8,4 +8,4 @@ flowchart
     lastItemInRestaurantFiles{Is this the last item in restaurant files?} --> |Yes| lastItemInRestaurantKeys{Is this last item in restaurant keys?}
     lastItemInRestaurantKeys --> |No| printIndexRestaurantLocations(print the index of restaurant and the locations) -->|Next Item|lastItemInRestaurantKeys
     lastItemInRestaurantFiles --> |No| createRestaurantItem(create new restaurant object at index restaurant name) -->|Next Item|lastItemInRestaurantFiles
-    lastItemInRestaurantKeys --> askUserForRestaurant[/Ask user for 'q' or /]
+    lastItemInRestaurantKeys --> askUserForRestaurant[/Ask user for 'q' or for /]
