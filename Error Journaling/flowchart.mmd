@@ -16,7 +16,7 @@ flowchart
     ifUserQ{does user_ride = q?}
     PrintSleep(print 'Thank you for visiting the Amusement Park!')
     endBlock((End))
-    getUserRideKey(get the value from list rides.keys at index int(user_ride) - 1)
+    getUserRideKey(get the value from list rides.keys at index user_ride casted to int - 1)
     printUserRide(print the user_ride)
     userRideNumber{is user_ride a number?}
     printInputInvalid(print 'Input is invalid. Please try again.')
@@ -28,4 +28,4 @@ flowchart
     displayRide(display ride using the argument rides[user_ride])
     printInvalidAge[/print 'Sorry we can't let you go in.\n'/]
     printQtoReturnBack[/print 'Hit q to return back.'/]
-    QuitNoInput[/call quit_no_input/]
+    QuitNoInput[/'call' quit_no_input/]
