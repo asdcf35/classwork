@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-05-14T22:17:53.809Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" version="24.4.0" etag="cpbghYKSO0KTdfmjOhca" type="device">
+<mxfile host="app.diagrams.net" modified="2024-05-14T23:26:32.641Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" version="24.4.0" etag="biVvSt2YCgLNReXxxPpB" type="device">
   <diagram name="Page-1" id="J3T0IwS7myqQdHtLeNHc">
-    <mxGraphModel dx="1527" dy="337" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1317" dy="232" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -40,23 +40,38 @@
         <mxCell id="J7ISV5oreiWeoYotv0Rw-6" value="call rides from csv and store it in a variable called rides.csv" style="rounded=1;absoluteArcSize=1;arcSize=14;whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="-93" y="440" width="449" height="33" as="geometry" />
         </mxCell>
-        <mxCell id="J7ISV5oreiWeoYotv0Rw-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="J7ISV5oreiWeoYotv0Rw-7" target="J7ISV5oreiWeoYotv0Rw-8">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="J7ISV5oreiWeoYotv0Rw-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="J7ISV5oreiWeoYotv0Rw-7" target="J7ISV5oreiWeoYotv0Rw-45">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="131.5" y="592" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="J7ISV5oreiWeoYotv0Rw-7" value="create variable list_of_rides, storing &#39;Here is a list of all the rides:&#39;" style="rounded=1;absoluteArcSize=1;arcSize=14;whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="-113.5" y="510" width="490" height="49" as="geometry" />
+          <mxGeometry x="-113.5" y="510" width="490" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="J7ISV5oreiWeoYotv0Rw-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="J7ISV5oreiWeoYotv0Rw-8" target="J7ISV5oreiWeoYotv0Rw-9">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="J7ISV5oreiWeoYotv0Rw-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" target="J7ISV5oreiWeoYotv0Rw-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="21.5" y="627.5" as="sourcePoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="J7ISV5oreiWeoYotv0Rw-8" value="is this the last item in the keys of rides" style="rounded=1;absoluteArcSize=1;arcSize=14;whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="-16.5" y="596" width="296" height="33" as="geometry" />
+        <mxCell id="J7ISV5oreiWeoYotv0Rw-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="J7ISV5oreiWeoYotv0Rw-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130" y="570" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-245" y="570" />
+              <mxPoint x="130" y="570" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J7ISV5oreiWeoYotv0Rw-48" value="Next Element" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="J7ISV5oreiWeoYotv0Rw-47">
+          <mxGeometry x="0.3854" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="J7ISV5oreiWeoYotv0Rw-9" value="add the index and the ride_name in a formatted string" style="rounded=1;absoluteArcSize=1;arcSize=14;whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="-480" y="596" width="408" height="33" as="geometry" />
+          <mxGeometry x="-448.5" y="611.5" width="408" height="33" as="geometry" />
         </mxCell>
         <mxCell id="J7ISV5oreiWeoYotv0Rw-10" value="clear the terminal" style="rounded=1;absoluteArcSize=1;arcSize=14;whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="71" y="750" width="113" height="33" as="geometry" />
+          <mxGeometry x="75" y="700" width="113" height="33" as="geometry" />
         </mxCell>
         <mxCell id="J7ISV5oreiWeoYotv0Rw-11" value="print &#39;Welcome to the Amusement Park!&#39;" style="rounded=1;absoluteArcSize=1;arcSize=14;whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="5.5" y="830" width="269" height="33" as="geometry" />
@@ -111,6 +126,12 @@
         </mxCell>
         <mxCell id="J7ISV5oreiWeoYotv0Rw-29" value="&#39;call&#39; quit_no_input" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="9691" y="559" width="173" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="J7ISV5oreiWeoYotv0Rw-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="J7ISV5oreiWeoYotv0Rw-45" target="J7ISV5oreiWeoYotv0Rw-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J7ISV5oreiWeoYotv0Rw-45" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;is this the last item in the keys of rides&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="21.5" y="596" width="220" height="64" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
