@@ -53,12 +53,12 @@ def main():
         
         try:
             #one liner basically saying keep q if number is q, otherwise try to change as 
-            number = "q" if number == "q" else int(number) - 1
+            number = "q" if number == "q" else int(number) 
             if number == "q":
                 break
         
             #raise an error if the number is greater than the highest index in the restaurants dictionary
-            if int(number) > len(restaurants) - 1:
+            if int(number) > len(restaurants):
                 raise ValueError
             
             #get the name of the restaurant using the number as the index
