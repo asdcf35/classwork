@@ -11,4 +11,6 @@ flowchart
     lastItemInRestaurantKeys --> askUserForRestaurant[/Ask user for 'q' or for number/] -->
     isNumberQ(Is number = q?) --> |yes| retainQ(Keep it at q)
     isNumberQ --> |no| checkNumber(Is number a number)
-    checkNumber -->|no| 
+    checkNumber -->|no| invalidNumber(print saying number is invalid) --> isNumberQ
+    checkNumber --> |yes| checkInRange(is number less than the length of the index)
+    checkInRange --> |yes|
