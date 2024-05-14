@@ -13,6 +13,7 @@ flowchart
     isNumberQ --> |no| checkNumber(Is number a number)
     checkNumber -->|no| invalidNumber(print saying number is invalid) --> isNumberQ
     checkNumber --> |yes| checkInRange(is number less than the length of the index)
-    checkInRange --> |no| invalidNumber
     checkInRange --> |yes| findKeyAtIndex(Find the name of the restaurant in the list, using the key of the number minus 1)
+    checkInRange --> |no| invalidNumber
+    findKeyAtIndex --> 
     

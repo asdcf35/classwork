@@ -77,17 +77,6 @@ def main():
     
 
 
-    #after, check if they want to see if the code fully runs
-    check_for_run = input(
-        "Do you want to check if the code fully runs?('y' for yes, anything else for no)"
-    )
-    #if yes('y'), continue onto the actual code
-    if check_for_run == "y":
-        print("Ok")
-    #else(anything else) -> print goodbye and exit code
-    else:
-        print("Goodbye!")
-        quit()
 
 if __name__ == '__main__':
     main()
