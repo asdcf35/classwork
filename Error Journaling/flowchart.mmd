@@ -13,4 +13,5 @@ flowchart
     isNumberQ --> |no| checkNumber(Is number a number)
     checkNumber -->|no| invalidNumber(print saying number is invalid) --> isNumberQ
     checkNumber --> |yes| checkInRange(is number less than the length of the index)
-    checkInRange --> |yes|
+    checkInRange --> |no| invalidNumber
+    checkInRange --> |yes| 
