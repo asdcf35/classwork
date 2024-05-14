@@ -58,7 +58,7 @@ def main():
                 break
         
             #raise an error if the number is greater than the highest index in the restaurants dictionary
-            if int(number) - 1 > len(restaurants) - 1:
+            if int(number) > len(restaurants) - 1:
                 raise ValueError
             
             #get the name of the restaurant using the number as the index
