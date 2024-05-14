@@ -13,6 +13,14 @@ flowchart
     waitAndPrint[/Wait 1 seconds, then print list_of_rides/]
     askUserForRides[/Ask user what ride they want to go to, and store to user_ride/]
     ifUserQ{does user_ride = q?}
-    PrintSleep(print "Thank you for visiting the Amusement Park!")
+    PrintSleep(print 'Thank you for visiting the Amusement Park!')
     endBlock((End))
-    getUserRideKey(find the name of the ride("the key") as the 
+    getUserRideKey(get the value from list rides.keys at index int(user_ride) - 1)
+    printUserRide(print the user_ride)
+    userRideNumber{is user_ride a number?}
+    printInputInvalid(print 'Input is invalid. Please try again.')
+    ridesEqualToWeirdNumber(is attribute user_range in the Ride Object accessed from the key equal to 0, 999999999?)
+    dispRide(display ride rides[user_ride])
+    printCheckAge(print stating that they need to check the age)
+    askAge[/ask user for their age/]
+    
