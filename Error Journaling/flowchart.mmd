@@ -1,6 +1,7 @@
 flowchart
     importOS(import os)
     importSleep(import sleep)
+    
     importMsvcrt(import msvcrt)
     everythingFromBackend(import everything from backend)
     consoleImport(import console from rich.console)
@@ -25,4 +26,6 @@ flowchart
     askAge[/ask user for their age/]
     ridesCheckAge{does the ride_check method accessed by the user_ride in rides return true?}
     displayRide(display ride using the argument rides[user_ride])
-    printInvalidAge(sorry we can
+    printInvalidAge[/print 'Sorry we can't let you go in.\n'/]
+    printQtoReturnBack[/print 'Hit q to return back.'/]
+    callQuitNoInput[/call quit_no_input/]
