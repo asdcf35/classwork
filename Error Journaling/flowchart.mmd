@@ -10,8 +10,7 @@ flowchart
     lastItemInRestaurantFiles --> |No| createRestaurantItem(create new restaurant object at index restaurant name) -->|Next Item|lastItemInRestaurantFiles
     lastItemInRestaurantKeys --> askUserForRestaurant[/Ask user for 'q' or for number/] -->
     isNumberQ(Is number = q?) --> |yes| retainQ(Keep it at q) --> isQ(Is number=q?)
-    isNumberQ --> |no| isQ
-    checkNumber(Is number a number)
+    isNumberQ --> |no|number(Change number to a integer)
     checkNumber -->|no| invalidNumber(print saying number is invalid) --> isNumberQ
     checkNumber --> |yes| checkInRange(is number less than the length of the index)
     checkInRange --> |yes| findKeyAtIndex(Find the name of the restaurant in the list, using the key of the number minus 1)
