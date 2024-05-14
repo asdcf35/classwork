@@ -6,5 +6,13 @@ flowchart
     consoleImport(import console from rich.console)
     callRidesFromCsv(call rides from csv and store it in a variable called rides.csv)
     listOfAllRides(create variable list_of_rides, storing "Here is a list of all the rides:\n")
-    lastItemInRidesKeys(call 
+    lastItemInRidesKeys(is this the last item in the keys of rides)
+    addToListOfRides(add the index and the ride_name in a formatted string)
+    clearTerminal(clear the terminal)
+    greeting(print 'Welcome to the Amusement Park!')
+    waitAndPrint[/Wait 1 seconds, then print list_of_rides/]
+    askUserForRides[/Ask user what ride they want to go to, and store to user_ride/]
+    ifUserQ{does user_ride = q?}
+    PrintSleep(print "Thank you for visiting the Amusement Park!")
+    endBlock((End))
     
