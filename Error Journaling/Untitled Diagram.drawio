@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-05-14T23:28:45.976Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" version="24.4.0" etag="VtniYYXw7Quwz80Ld0vg" type="device">
+<mxfile host="app.diagrams.net" modified="2024-05-14T23:29:51.392Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" version="24.4.0" etag="mtXHok_o6_biZR9q6eP0" type="device">
   <diagram name="Page-1" id="J3T0IwS7myqQdHtLeNHc">
-    <mxGraphModel dx="1270" dy="209" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1142" dy="145" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -91,13 +91,16 @@
         <mxCell id="J7ISV5oreiWeoYotv0Rw-13" value="Ask user what ride they want to go to(or quit), and store to user_ride" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-100" y="920" width="445" height="33" as="geometry" />
         </mxCell>
+        <mxCell id="J7ISV5oreiWeoYotv0Rw-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="J7ISV5oreiWeoYotv0Rw-14" target="J7ISV5oreiWeoYotv0Rw-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="J7ISV5oreiWeoYotv0Rw-14" value="does user_ride = q?" style="rhombus;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="29.5" y="1010.5" width="186" height="186" as="geometry" />
         </mxCell>
-        <mxCell id="J7ISV5oreiWeoYotv0Rw-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="J7ISV5oreiWeoYotv0Rw-15" target="J7ISV5oreiWeoYotv0Rw-14">
+        <mxCell id="J7ISV5oreiWeoYotv0Rw-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=0;" edge="1" parent="1" source="J7ISV5oreiWeoYotv0Rw-15" target="J7ISV5oreiWeoYotv0Rw-14">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="J7ISV5oreiWeoYotv0Rw-59" value="Text" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="J7ISV5oreiWeoYotv0Rw-55">
+        <mxCell id="J7ISV5oreiWeoYotv0Rw-59" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="J7ISV5oreiWeoYotv0Rw-55">
           <mxGeometry x="0.2558" y="-1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -112,10 +115,15 @@
           <mxGeometry x="450" y="644.5" width="470" height="33" as="geometry" />
         </mxCell>
         <mxCell id="J7ISV5oreiWeoYotv0Rw-18" value="print the user_ride" style="rounded=1;absoluteArcSize=1;arcSize=14;whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="1229" y="752" width="113" height="33" as="geometry" />
+          <mxGeometry x="1229" y="752" width="113" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="J7ISV5oreiWeoYotv0Rw-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="J7ISV5oreiWeoYotv0Rw-19">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-40" y="1350" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="J7ISV5oreiWeoYotv0Rw-19" value="is user_ride a number?" style="rhombus;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="1429" y="664" width="173" height="210" as="geometry" />
+          <mxGeometry x="36" y="1240" width="173" height="210" as="geometry" />
         </mxCell>
         <mxCell id="J7ISV5oreiWeoYotv0Rw-20" value="print &#39;Input is invalid. Please try again.&#39;" style="rounded=1;absoluteArcSize=1;arcSize=14;whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="1689" y="752" width="259" height="33" as="geometry" />
