@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-05-15T00:24:54.315Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" version="24.4.0" etag="ApquIjyMlcR0JnouIo0M" type="device">
+<mxfile host="app.diagrams.net" modified="2024-05-15T00:25:56.119Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" version="24.4.0" etag="Z-UCwZabbufIq3qeHPbj" type="device">
   <diagram name="Page-1" id="J3T0IwS7myqQdHtLeNHc">
-    <mxGraphModel dx="1574" dy="360" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2950" dy="1044" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -148,29 +148,8 @@
         <mxCell id="J7ISV5oreiWeoYotv0Rw-22" value="display ride using the argument rides user_ride" style="rounded=1;absoluteArcSize=1;arcSize=14;whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="-440" y="1708.5" width="316" height="33" as="geometry" />
         </mxCell>
-        <mxCell id="J7ISV5oreiWeoYotv0Rw-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="J7ISV5oreiWeoYotv0Rw-23" target="J7ISV5oreiWeoYotv0Rw-24">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="J7ISV5oreiWeoYotv0Rw-23" value="print stating that they need to check the age" style="rounded=1;absoluteArcSize=1;arcSize=14;whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="1690" y="970" width="302" height="33" as="geometry" />
-        </mxCell>
-        <mxCell id="J7ISV5oreiWeoYotv0Rw-81" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="J7ISV5oreiWeoYotv0Rw-24" target="J7ISV5oreiWeoYotv0Rw-73">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="J7ISV5oreiWeoYotv0Rw-24" value="ask user for their age" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="1764.5" y="1040" width="153" height="33" as="geometry" />
-        </mxCell>
         <mxCell id="J7ISV5oreiWeoYotv0Rw-25" value="does the ride_check method accessed by the user_ride in rides return true?" style="rhombus;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="3769" y="473" width="555" height="592" as="geometry" />
-        </mxCell>
-        <mxCell id="J7ISV5oreiWeoYotv0Rw-26" value="display ride using the" style="rounded=1;absoluteArcSize=1;arcSize=14;whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="4410" y="752" width="131" height="33" as="geometry" />
-        </mxCell>
-        <mxCell id="J7ISV5oreiWeoYotv0Rw-27" value="print &#39;Sorry we can&#39;t let you go in.&#xa;&#39;" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="4628" y="744" width="254" height="49" as="geometry" />
-        </mxCell>
-        <mxCell id="J7ISV5oreiWeoYotv0Rw-28" value="print &#39;Hit q to return back.&#39;" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="4969" y="752" width="194" height="33" as="geometry" />
+          <mxGeometry x="1563.5" y="1116.5" width="555" height="592" as="geometry" />
         </mxCell>
         <mxCell id="J7ISV5oreiWeoYotv0Rw-29" value="&#39;call&#39; quit_no_input" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="9691" y="559" width="173" height="33" as="geometry" />
@@ -202,8 +181,19 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="J7ISV5oreiWeoYotv0Rw-73" value="display ride using the argument rides user_ride" style="rounded=1;absoluteArcSize=1;arcSize=14;whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="1683" y="1110" width="316" height="33" as="geometry" />
+        <mxCell id="J7ISV5oreiWeoYotv0Rw-82" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="J7ISV5oreiWeoYotv0Rw-83" target="J7ISV5oreiWeoYotv0Rw-85">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J7ISV5oreiWeoYotv0Rw-83" value="print stating that they need to check the age" style="rounded=1;absoluteArcSize=1;arcSize=14;whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1690" y="970" width="302" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="J7ISV5oreiWeoYotv0Rw-84" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="J7ISV5oreiWeoYotv0Rw-85" target="J7ISV5oreiWeoYotv0Rw-25">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1841" y="1109.9999999999998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J7ISV5oreiWeoYotv0Rw-85" value="ask user for their age" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1764.5" y="1040" width="153" height="33" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
