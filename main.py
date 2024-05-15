@@ -19,7 +19,7 @@ import roperator
 from rich.progress import track
 # -----------------------------------------------------
 
-#this is meant to be used in IDLE
+#this is meant to be used in IDL
 
 
 ## password code
